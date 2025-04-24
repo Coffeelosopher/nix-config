@@ -43,7 +43,7 @@
     
     # Editors
     ## Neovim
-    ../../modules/software/editors/neovim/nvchad.nix
+    ../../modules/software/editors/neovim/default.nix
 
     ## Desktop
     ../../modules/software/desktop/kde.nix

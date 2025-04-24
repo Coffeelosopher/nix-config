@@ -20,7 +20,7 @@
     
     # Editors
     ## Neovim
-    ../../modules/software/editors/neovim/nvchad.nix
+    ../../modules/software/editors/neovim/default.nix
 
     ## Container
     #../../modules/software/virt/container/docker/default.nix

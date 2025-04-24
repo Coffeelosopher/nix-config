@@ -27,7 +27,8 @@
 
   fonts.packages = with pkgs; [ 
      nerdfonts.FiraCode
-     nerdfonts.CaskaydiaMono
+
+     #nerdfonts.CaskaydiaMono
   ];
 
   # Enable FLatpacks
