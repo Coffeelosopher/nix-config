@@ -14,14 +14,16 @@
   environment.systemPackages = with pkgs; [ 
     libsForQt5.qtstyleplugin-kvantum 
     kdePackages.kio
-    kdePackages.kio-fuse #to mount remote filesystems via FUSE
-    kdePackages.kio-extras #extra protocols support (sftp, fish and more)
-    kdePackages.dolphin-plugins #dolphin filemanager sugar
+    kdePackages.kio-fuse              # to mount remote filesystems via FUSE
+    kdePackages.kio-extras            # extra protocols support (sftp, fish and more)
+    kdePackages.dolphin               # dolphin filemanager 
+    kdePackages.dolphin-plugins       #dolphin filemanager sugar
     kdePackages.qtstyleplugin-kvantum
-    #(nerdfonts.override { fonts = [ "CaskaydiaMono" ]; }) # currently not working (24.11/unstable) should be working in the future for 25.xx
 
-    #kdePackages.koi # plasma theme toggle thingy ... is okay... 
-    #latte-dock # kde framework dock panel, kinda stinky
+    #kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
+    #latte-dock                       # kde framework dock panel, kinda stinky
+
+    #(nerdfonts.override { fonts = [ "CaskaydiaMono" ]; }) # currently not working (24.11/unstable) should be working in the future for 25.xx
 ];
   # Enable FLatpacks
   services.flatpak.enable = true;
