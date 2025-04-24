@@ -4,19 +4,18 @@
     viAlias = true;
     vimAlias = true;
     defaultEditor = true;
-    configure = {
-      customRC = ''
-        " here your custom configuration goes!
-      '';
-      # Plugins
-      packages.myVimPackage = with pkgs.vimPlugins; {
-        start = [
-          # Use NVchad as default for now 
-          nvchad
-          nvchad-ui
-          # nvchat-extensions
-        ];
-      };
-    };
   };
+
+  environment.systemPackages = with pkgs; [
+    ripgrep
+    gcc
+    gnumake
+    zig
+    luarocks
+    #lua
+    lua51Packages.lua
+    lua-language-server
+    lazygit
+    xclip
+  ];
 }
