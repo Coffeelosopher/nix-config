@@ -7,7 +7,7 @@
   environment.shells = with pkgs; [ zsh ];
 
   fonts.packages = with pkgs; [ 
-    nerdfonts.fira-code
+    nerd-fonts.fira-code
   ];
 
   programs.zsh = {

@@ -64,10 +64,10 @@
 
   # Nerd Fonts
   fonts.packages = with pkgs; [
-      nerdfonts.fira-code
-      #nerdfonts.DroidSansMono
-      #nerdfonts.ComicShannsMono
-      #nerdfonts.IBMPlexMono Terminus
+      nerd-fonts.fira-code
+      #nerd-fonts; ;fonts.DroidSansMono
+      #nerd-fonts; ;fonts.ComicShannsMono
+      #nerd-fonts; ;fonts.IBMPlexMono Terminus
   ];
 
   # Packages to exclude from GNOME

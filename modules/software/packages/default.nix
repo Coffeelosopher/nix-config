@@ -6,8 +6,11 @@
 	bash
 	rsync
 	eza # ls and other basic commands
+  zip
+  unzip
 	nano
 	vim
+  neovim
 	git
 	git-annex
 	gh

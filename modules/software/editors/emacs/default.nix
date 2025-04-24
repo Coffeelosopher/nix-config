@@ -12,8 +12,8 @@ let
 in {
 
 	fonts.packages = with pkgs; [
-			nerdfonts.NerdFontsSymbolsOnly
-      nerdfonts.CaskaydiaCode
+			#nerd-fonts.NerdFontsSymbolsOnly # todo search for current name with nix search nixpkgs NerdFontsSymbol...
+      nerd-fonts.caskaydia-code
 	]
 
 	nixpkgs.overlays = [
