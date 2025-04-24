@@ -18,4 +18,9 @@
     lazygit
     xclip
   ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.caskaydia-mono
+  ];
+
 }
