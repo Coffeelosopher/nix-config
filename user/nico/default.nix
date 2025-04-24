@@ -4,9 +4,9 @@
     ../../modules/software/shell/zsh.nix
   ];
 
-  users.users."${config.userName}"= {
-    packages = with pkgs; [ ];
-  };
+  #users.users."${config.userName}"= {
+  #  packages = with pkgs; [ ];
+  #};
 
   users.users."${config.userName}"= {
     isNormalUser = true;

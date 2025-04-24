@@ -4,39 +4,43 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = { self, nixpkgs, determinate, ... }@inputs: {
+  outputs = { self, nixpkgs, determinate, nixos-wsl, ... }@inputs: {
+
     nixosConfigurations = {
-
-
-      # Die Turmstellung, the highest point
+      
       zenit = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/zenit/default.nix
+            determinate.nixosModules.default
+          ];
+      };
+        
+      axiom = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/zenit/default.nix
+          ./hosts/axiom/default.nix
           determinate.nixosModules.default
         ];
       };
-      
 
-      ## Axiom is a self-evident truth a statement that's accepted as true without needing proof.
-      #axiom = nixpkgs.lib.nixosSystem {
-      #  system = "x86_64-linux";
-      #  modules = [
-      #    ./hosts/axiom/default.nix
-      #    determinate.nixosModules.default
-      #  ];
-      #};
+      wsl = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/wsl/default.nix
+          determinate.nixosModules.default
 
-      #wsl = nixpkgs.lib.nixosSystem {
-      #  system = "x86_64-linux";
-      #  modules = [
-      #    ./hosts/wsl/default.nix
-      #    determinate.nixosModules.default
-      #  ];
-      #};
-
+          nixos-wsl.nixosModules.default
+          {
+            system.stateVersion = "24.05";
+            wsl.enable = true;
+          }
+        ];
+      };
     };
   };
 }
+
