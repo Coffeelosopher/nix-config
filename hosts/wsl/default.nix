@@ -41,7 +41,7 @@
 
   #wsl.startMenuLaunchers = true;
   # HostName and Stateversion
-  #networking.hostName = "wsl";
+  networking.hostName = "wsl";
 }
 
 
