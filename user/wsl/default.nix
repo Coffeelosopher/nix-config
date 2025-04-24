@@ -9,10 +9,7 @@
 		description = "wsl default user";
 		extraGroups =
 		[ "networkmanager" "network" "wheel" "lxd" "docker" "libvirtd" "syncthing" ];
+    packages = with pkgs; [ ];
 
-   packages = with pkgs; [
-     inkscape 
-   ];
 	};
-
 }
