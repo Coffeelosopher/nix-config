@@ -79,7 +79,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-a64f19c4-74ca-40ff-bde7-3332545856a9".device = "/dev/disk/by-uuid/a64f19c4-74ca-40ff-bde7-3332545856a9";
-  networking.hostName = "Zenit"; # Define your hostname.
+  networking.hostName = "zenit"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
