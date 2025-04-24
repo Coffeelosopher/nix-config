@@ -23,8 +23,13 @@
     #kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
     #latte-dock                       # kde framework dock panel, kinda stinky
 
-    #(nerdfonts.override { fonts = [ "CaskaydiaMono" ]; }) # currently not working (24.11/unstable) should be working in the future for 25.xx
 ];
+
+  fonts.packages = with pkgs; [ 
+     nerdfonts.FiraCode
+     nerdfonts.CaskaydiaMono
+  ];
+
   # Enable FLatpacks
   services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

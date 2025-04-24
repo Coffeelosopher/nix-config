@@ -11,7 +11,9 @@
   users.defaultUserShell = pkgs.zsh;
 
   # install some cool fonts
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+  fonts.packages = with pkgs; [ 
+     nerdfonts.FiraCode
+  ];
 
   # Z-shell preferences
   programs.zsh = {

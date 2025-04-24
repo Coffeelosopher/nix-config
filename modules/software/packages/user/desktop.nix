@@ -30,7 +30,6 @@ services.mullvad-vpn.enable = true;
         koodo-reader
         kdePackages.kolourpaint
         alacritty
-        dolphin
         starship # terminal prompt
         flatpak
         #flatpak-builder # not sure if needed
@@ -117,5 +116,7 @@ services.mullvad-vpn.enable = true;
   # programs.starship.enable = true;
   environment.systemPackages = with pkgs; [ fzf ];
 
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+  fonts.packages = with pkgs; [ 
+     nerdfonts.FiraCode
+  ];
 }

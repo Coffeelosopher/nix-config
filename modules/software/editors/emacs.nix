@@ -12,8 +12,8 @@ let
 in {
 
 	fonts.packages = with pkgs; [
-			(nerdfonts.override { fonts = ["NerdFontsSymbolsOnly"]; })
-			cascadia-code
+			nerdfonts.NerdFontsSymbolsOnly
+      nerdfonts.CaskaydiaCode
 	];
 
 	nixpkgs.overlays = [

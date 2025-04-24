@@ -5,7 +5,10 @@
   programs.starship.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
-  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+
+  fonts.packages = with pkgs; [ 
+    nerdfonts.FiraCode
+  ]; 
 
   programs.zsh = {
     enable = true;

@@ -62,18 +62,13 @@
 
   ];
 
-# Nerd Fonts
-fonts.packages = with pkgs; [
-  (nerdfonts.override {
-      fonts = [
-          "FiraCode"
-          "DroidSansMono"
-          "ComicShannsMono"
-          "IBMPlexMono" "Terminus"
-          "NerdFontsSymbolsOnly" # Doom emacs dependency
-      ];
-   })
-];
+  # Nerd Fonts
+  fonts.packages = with pkgs; [
+      nerdfonts.FiraCode
+      nerdfonts.DroidSansMono
+      nerdfonts.ComicShannsMono
+      nerdfonts.IBMPlexMono Terminus
+  ];
 
   # Packages to exclude from GNOME
 environment.gnome.excludePackages = (with pkgs; [
