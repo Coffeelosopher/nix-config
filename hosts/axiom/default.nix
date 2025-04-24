@@ -3,6 +3,7 @@
 {
   _module.args = {
     userName = "nico";
+    amogus = "nixos";
   };
 
   # SSHD
@@ -19,15 +20,13 @@
 
   imports = [
     # TEMPORARY
-    ./nvidia-gpu.nix
-    ./packages.nix
     ./hardware.nix
 
     # System Base/Type
     ../../modules/base/desktop.nix
 
     # User
-    #../../user/nico/default.nix
+    ../../user/nico/default.nix
 
     # Modules
     ## Software
@@ -79,7 +78,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-a64f19c4-74ca-40ff-bde7-3332545856a9".device = "/dev/disk/by-uuid/a64f19c4-74ca-40ff-bde7-3332545856a9";
-  networking.hostName = "zenit"; # Define your hostname.
+  networking.hostName = "axiom"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -103,7 +102,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

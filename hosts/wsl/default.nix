@@ -1,5 +1,10 @@
 { config, lib, pkgs, modulesPath, ... }: {
 
+  _module.args = {
+    userName = "nico";
+    amogus = "nixos";
+  };
+
   imports = [
     # System Base/Type
     ../../modules/base/desktop.nix
@@ -34,7 +39,7 @@
 
   ];
 
-  wsl.startMenuLaunchers = true;
+  #wsl.startMenuLaunchers = true;
   # HostName and Stateversion
   #networking.hostName = "wsl";
 }
