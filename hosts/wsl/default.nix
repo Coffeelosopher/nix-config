@@ -1,8 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }: {
 
   _module.args = {
-    userName = "nico";
-    amogus = "nixos";
+    username = "nixos";
   };
 
   imports = [
@@ -12,7 +11,6 @@
     # User
     ../../user/wsl/default.nix 
 
-    # Modules
     ## Software
     ### User Packages
     ../../modules/software/packages/user/wsl.nix
@@ -27,20 +25,18 @@
     ## Neovim
     ../../modules/software/editors/neovim/default.nix
 
-    ## Container
+    # Container
     #../../modules/software/virt/container/docker/default.nix
     #../../modules/software/virt/container/docker/watchtower.nix
     #../../modules/software/virt/container/lxd/default.nix
 
 
-    # Housekeeping
-    ## garbage collection
+    # Automation
+    ## Garbage collection
     #../../modules/houskeeping/gc/default.nix
-
   ];
 
-  #wsl.startMenuLaunchers = true;
-  # HostName and Stateversion
+  wsl.startMenuLaunchers = true;
   networking.hostName = "wsl";
 }
 
