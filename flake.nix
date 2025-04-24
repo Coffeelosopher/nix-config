@@ -3,9 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, determinate, ... }@inputs: {
     nixosConfigurations = {
 
 
@@ -14,6 +15,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/zenit/default.nix
+          determinate.nixosModules.default
         ];
       };
       
