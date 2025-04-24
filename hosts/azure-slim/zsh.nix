@@ -12,7 +12,7 @@
 
   # install some cool fonts
   fonts.packages = with pkgs; [ 
-    nerdfonts.FiraCode
+    nerdfonts.fira-code
   ];
 
   # Z-shell preferences

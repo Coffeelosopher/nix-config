@@ -116,7 +116,8 @@ services.mullvad-vpn.enable = true;
   # programs.starship.enable = true;
   environment.systemPackages = with pkgs; [ fzf ];
 
-  fonts.packages = with pkgs; [ 
-     nerdfonts.FiraCode
+  fonts.packages = [
+    pkgs.nerd-fonts._0xproto
+    pkgs.nerd-fonts.droid-sans-mono
   ];
 }

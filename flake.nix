@@ -20,20 +20,22 @@
       };
       
 
-      # Axiom is a self-evident truth a statement that's accepted as true without needing proof. It's the foundation you build logic or systems on.
-      axiom = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/axiom/default.nix
-        ];
-      };
+      ## Axiom is a self-evident truth a statement that's accepted as true without needing proof.
+      #axiom = nixpkgs.lib.nixosSystem {
+      #  system = "x86_64-linux";
+      #  modules = [
+      #    ./hosts/axiom/default.nix
+      #    determinate.nixosModules.default
+      #  ];
+      #};
 
-      wsl = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/wsl/default.nix
-        ];
-      };
+      #wsl = nixpkgs.lib.nixosSystem {
+      #  system = "x86_64-linux";
+      #  modules = [
+      #    ./hosts/wsl/default.nix
+      #    determinate.nixosModules.default
+      #  ];
+      #};
 
     };
   };

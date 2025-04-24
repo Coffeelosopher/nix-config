@@ -23,12 +23,11 @@
     #kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
     #latte-dock                       # kde framework dock panel, kinda stinky
 
-];
+  ];
 
   fonts.packages = with pkgs; [ 
-     nerdfonts.FiraCode
-
-     #nerdfonts.CaskaydiaMono
+    nerd-fonts.fira-code
+    nerd-fonts.caskaydia-mono
   ];
 
   # Enable FLatpacks

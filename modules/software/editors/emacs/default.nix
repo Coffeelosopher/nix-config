@@ -13,8 +13,8 @@ in {
 
 	fonts.packages = with pkgs; [
 			nerdfonts.NerdFontsSymbolsOnly
-      #nerdfonts.CaskaydiaCode
-	];
+      nerdfonts.CaskaydiaCode
+	]
 
 	nixpkgs.overlays = [
 			(import (builtins.fetchTarball {

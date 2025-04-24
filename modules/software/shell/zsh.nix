@@ -7,8 +7,8 @@
   environment.shells = with pkgs; [ zsh ];
 
   fonts.packages = with pkgs; [ 
-    nerdfonts.FiraCode
-  ]; 
+    nerdfonts.fira-code
+  ];
 
   programs.zsh = {
     enable = true;
