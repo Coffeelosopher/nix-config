@@ -1,6 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
-
-{
+{ config, lib, pkgs, modulesPath, ... } : {
   _module.args = {
     userName = "nico";
   };
@@ -18,7 +16,7 @@
 	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" ];
 
   imports = [
-    # TEMPORARY
+    # Local
     ./nvidia-gpu.nix
     ./packages.nix
     ./hardware.nix
@@ -29,32 +27,32 @@
     # User
     #../../user/nico/default.nix
 
-    # Modules
-    ## Software
-    ### User Packages
-    #../../modules/software/packages/user/wsl.nix
-    ../../modules/software/packages/user/desktop.nix
-
-    ### System Packages
+    # Software
+    ## System Packages
     ../../modules/software/packages/default.nix
 
-    ## Azure
-    #../../modules/software/packages/azure.nix
-    
-    # Editors
-    ## Neovim
-    ../../modules/software/editors/neovim/default.nix
+    ### User Packages
+    ../../modules/software/packages/user/desktop.nix
 
     ## Desktop
     ../../modules/software/desktop/kde.nix
 
-    ## Container
+    ## Neovim
+    ../../modules/software/editors/neovim/default.nix
+
+    ## Gaming
+    ../../modules/software/gaming/default.nix
+
+    # Container
     #../../modules/software/virt/container/docker/default.nix
     #../../modules/software/virt/container/docker/watchtower.nix
     #../../modules/software/virt/container/lxd/default.nix
 
     ## Virtual Machines
     ../../modules/software/packages/atos.nix
+
+    ## Azure
+    #../../modules/software/packages/azure.nix
 
     # Services
      # Default
@@ -64,13 +62,10 @@
     ## garbage collection
     #../../modules/houskeeping/gc/default.nix
 
-
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix
     #../modules/software/vpn/zerotier/default.nix
 
-    ## Gaming
-    ../../modules/software/gaming/default.nix
 
   ];
 

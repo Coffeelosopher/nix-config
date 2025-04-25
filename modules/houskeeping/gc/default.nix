@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... } : {
   nix.gc = {
     automatic = true;
     dates = "05:30";
@@ -6,6 +6,7 @@
     persistent = true;
     randomizedDelaySec = "30min";
   };
+
   virtualisation.docker = {
     autoPrune = {
       enable = true;
