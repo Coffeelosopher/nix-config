@@ -7,8 +7,8 @@
 
     # Modules
     #../../bundles/default.nix
-    ../../modules/software/virt/container/docker/default.nix
-    ../../modules/software/virt/container/docker/watchtower.nix
+    ../../modules/software/virtualisation/container/docker/default.nix
+    ../../modules/software/virtualisation/container/docker/watchtower.nix
     ../../modules/software/desktop/gnome.nix
     
     ../../modules/software/editors/emacs.nix # Experimental not working yet

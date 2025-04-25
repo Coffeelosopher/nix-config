@@ -7,8 +7,8 @@
   # Modules
   ../../bundles/default.nix
 
-  ../../modules/software/virt/container/docker/default.nix
-  ../../modules/software/virt/container/docker/watchtower.nix
+  ../../modules/software/virtualisation/container/docker/default.nix
+  ../../modules/software/virtualisation/container/docker/watchtower.nix
   ../../modules/software/packages/azure.nix
   ../../modules/software/vpn/tailscale/default.nix
   ../../modules/software/editors/neovim/nvchad.nix

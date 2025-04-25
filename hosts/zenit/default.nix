@@ -44,9 +44,9 @@
     ../../modules/software/gaming/default.nix
 
     # Container
-    #../../modules/software/virt/container/docker/default.nix
-    #../../modules/software/virt/container/docker/watchtower.nix
-    #../../modules/software/virt/container/lxd/default.nix
+    #../../modules/software/virtualisation/container/docker/default.nix
+    #../../modules/software/virtualisation/container/docker/watchtower.nix
+    #../../modules/software/virtualisation/container/lxd/default.nix
 
     ## Virtual Machines
     ../../modules/software/packages/atos.nix

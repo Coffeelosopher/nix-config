@@ -3,7 +3,7 @@
 
   # Modules
   ./zsh.nix
-  #../../modules/software/virt/container/docker/default.nix
+  #../../modules/software/virtualisation/container/docker/default.nix
 
   (modulesPath + "/virtualisation/azure-common.nix")
 

@@ -3,6 +3,6 @@
     # Hypervisor includes container
     ./containervisor.nix
     ## VM
-    ../modules/software/virt/vm/libvirt.nix
+    ../modules/software/virtualisation/vm/libvirt.nix
   ];
 }
