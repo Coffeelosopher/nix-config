@@ -1,28 +1,35 @@
 { config, lib, pkgs, modulesPath, ... }: {
   imports = [
-  ./network.nix
-  ./proxy.nix
-  ./hardware.nix
+    # Host specific
+    ./network.nix
+    ./proxy.nix
+    ./hardware.nix
 
-  # Modules
-  ../../bundles/default.nix
+    # Base
+      ../modules/base/server.nix
 
-  ../../modules/software/virtualisation/container/docker/default.nix
-  ../../modules/software/virtualisation/container/docker/watchtower.nix
-  ../../modules/software/packages/azure.nix
-  ../../modules/software/vpn/tailscale/default.nix
-  ../../modules/software/editors/neovim/nvchad.nix
+    # Software
+    ## virtualisation
+    ../../modules/software/virtualisation/container/docker/default.nix
+    ../../modules/software/virtualisation/container/docker/watchtower.nix
+
+    ## Cloud
+    ../../modules/software/packages/azure.nix
+
+    ## Editor
+    ../../modules/software/editors/neovim/nvchad.nix
   ];
 
-    # hostName
-    networking.hostName = "mblu";
-    system.stateVersion = "23.05";
+  # hostName
+  networking.hostName = "mblu";
+  system.stateVersion = "23.05";
 
   # Keymap + Keyboard variant
-    services.xserver = {
-        layout = "uk";
-        xkbVariant = "";
-    };
+  services.xserver = {
+      layout = "uk";
+      xkbVariant = "";
+  };
+
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   networking.domain = "";
