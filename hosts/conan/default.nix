@@ -32,11 +32,6 @@
     ../../modules/software/vpn/tailscale/default.nix
     #../modules/software/vpn/zerotier/default.nix
 
-    ## Gaming
-    #../../modules/software/gaming/steam.nix
-
-   ## Emacs
-   ../../modules/software/editors/emacs.nix
   ];
 
   # HostName and Stateversion
