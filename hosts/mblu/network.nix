@@ -1,17 +1,23 @@
 { config, lib, pkgs, ... }: {
 
 	networking = {
+    domain = "";
 	  interfaces = {
 	    ens3.ipv4.addresses = [{
 	      address = "195.90.211.242";
 	      prefixLength = 22;
 	    }];
 	  };
+
 	  defaultGateway = {
 	    address = "195.90.208.1";
 	    interface = "ens3";
 	  };
-	  nameservers = [ "1.1.1.1" "8.8.8.8" ];
+
+	  nameservers = [ 
+      "1.1.1.1" 
+      "8.8.8.8" 
+    ];
 	};
 
 

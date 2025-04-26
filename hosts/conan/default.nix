@@ -8,8 +8,8 @@
     ../../user/nico/default.nix
 
     # Modules
-    ## Desktop
-    #../../modules/software/desktop/gnome.nix
+    # Base
+    ../../modules/base/server.nix
 
     ## Container
     ../../modules/software/virtualisation/container/docker/default.nix
@@ -19,9 +19,6 @@
     # Services
     ## Syncthing
     ../../modules/services/syncthing/default.nix
-
-     # Default
-    ../../modules/default/default.nix
 
     # Housekeeping
     ## garbage collection

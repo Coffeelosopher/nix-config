@@ -22,7 +22,7 @@
     };
   };
 
-  services.nginx = {
+  services.nginx = {￼
     enable = true;
     recommendedProxySettings = true;
     recommendedGzipSettings = true;
@@ -31,21 +31,24 @@
 
     streamConfig = ''
     # (BetterMC) Minecraft Stream
-	# Conan
+  	# Conan
       server {
         listen 25565;
         proxy_timeout 20s;
         proxy_pass 100.85.197.111:25565;
       }
+
       server {
-	listen 24454 udp;
-	proxy_pass 100.85.197.111:24454;
+        listen 24454 udp;
+        proxy_pass 100.85.197.111:24454;
       }
+
       server {
-	listen 25575;
-	proxy_pass 100.85.197.111:25575;
+      	listen 25575;
+      	proxy_pass 100.85.197.111:25575;
       }
-	# Michael
+
+	   # Michael' NUC
      # server {
      #   listen 25565;
      #   proxy_timeout 20s;
@@ -57,6 +60,7 @@
      #   proxy_pass 100.95.117.61:25575;
      # }
      '';
+
     virtualHosts."own.nicklis.cloud" = {
       enableACME = true;
       forceSSL = true;
