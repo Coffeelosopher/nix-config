@@ -30,39 +30,18 @@
 
     # Modules
     ## Software
+    ### System Packages
+    ../../modules/software/packages/default.nix
     ### User Packages
     #../../modules/software/packages/user/wsl.nix
     ../../modules/software/packages/user/desktop.nix
 
-    ### System Packages
-    ../../modules/software/packages/default.nix
-
-    ## Azure
-    #../../modules/software/packages/azure.nix
-    
     # Editors
     ## Neovim
     ../../modules/software/editors/neovim/default.nix
 
     ## Desktop
     ../../modules/software/desktop/kde.nix
-
-    ## Container
-    #../../modules/software/virtualisation/container/docker/default.nix
-    #../../modules/software/virtualisation/container/docker/watchtower.nix
-    #../../modules/software/virtualisation/container/lxd/default.nix
-
-    ## Virtual Machines
-    ../../modules/software/packages/atos.nix
-
-    # Services
-     # Default
-    #../../modules/default/default.nix
-
-    # Housekeeping
-    ## garbage collection
-    #../../modules/houskeeping/gc/default.nix
-
 
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix
@@ -71,6 +50,18 @@
     ## Gaming
     ../../modules/software/gaming/default.nix
 
+    ## Container
+    #../../modules/software/virtualisation/container/docker/default.nix
+    #../../modules/software/virtualisation/container/docker/watchtower.nix
+    #../../modules/software/virtualisation/container/lxd/default.nix
+
+    # Services
+     # Default
+    #../../modules/default/default.nix
+
+    # Housekeeping
+    ## garbage collection
+    #../../modules/houskeeping/gc/default.nix
   ];
 
   # Bootloader.
