@@ -23,6 +23,9 @@ services.mullvad-vpn.enable = true;
       mullvad-vpn
 
         easyeffects
+        bluetui
+        pulsemixer
+        timeshift
         gimp
         gtk3
         gearlever
