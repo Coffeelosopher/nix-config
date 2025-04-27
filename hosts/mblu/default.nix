@@ -41,6 +41,5 @@
 
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
-  networking.domain = "";
   nixpkgs.config.allowUnfree = true;
  }
