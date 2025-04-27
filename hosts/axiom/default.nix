@@ -19,8 +19,8 @@
 	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" ];
 
   imports = [
-    # TEMPORARY
-    ./hardware.nix
+    # Host specific
+    ($modulesPath + "/lenovo/thinkpad/t480/default.nix")
 
     # System Base/Type
     ../../modules/base/desktop.nix
