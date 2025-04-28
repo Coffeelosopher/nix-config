@@ -3,11 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = { self, nixpkgs, determinate, nixos-wsl, ... }@inputs: {
+  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, ... }@inputs: {
 
     nixosConfigurations = {
       
@@ -24,6 +25,7 @@
       #  modules = [
       #    ./hosts/axiom/default.nix
       #    determinate.nixosModules.default
+      #    nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
       #  ];
       #};
 
