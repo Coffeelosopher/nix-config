@@ -44,6 +44,7 @@ services.mullvad-vpn.enable = true;
         firefox
         thunderbird
         vscode
+        ffmpeg-full
         #bitwarden # x86 only-use flatpak
         discord
         strawberry
