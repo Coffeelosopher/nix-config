@@ -10,7 +10,6 @@
       	croc
         amberol
       	sshuttle
-      	tor
         keepassxc
         spotifyd
         monero-gui
