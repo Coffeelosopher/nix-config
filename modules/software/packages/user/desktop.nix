@@ -30,12 +30,10 @@ services.mullvad-vpn.enable = true;
         gtk3
         gearlever
         neovide
-        koodo-reader
-        kdePackages.kolourpaint
+        koodo-reader # ebook reader
         alacritty
         starship # terminal prompt
         flatpak
-        #flatpak-builder # not sure if needed
         mpv
         gnome-software
         piper # Mouse utility
@@ -62,7 +60,6 @@ services.mullvad-vpn.enable = true;
         parsec-bin
         bleachbit
         filezilla # FTP Client
-        calibre # E-Book reader
         libreoffice
         pdfarranger
         yt-dlp
@@ -76,9 +73,7 @@ services.mullvad-vpn.enable = true;
   };
 
   # EXCLUDE KDE PLASMA PACKAGES
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  ];
-  ## EXPERIMENTS, move later TODO ## 
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [  ];
 
 # allowing "unsafe" packages overwrite
 # nixpkgs.config.permittedInsecurePackages = [
