@@ -17,6 +17,7 @@
     lua-language-server
     lazygit
     xclip
+    nodejs_23
   ];
 
   fonts.packages = with pkgs; [
