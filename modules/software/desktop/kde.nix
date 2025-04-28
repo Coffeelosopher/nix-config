@@ -12,19 +12,22 @@
   services.xserver.enable = false; # disabled for wayland only setup
 
   environment.systemPackages = with pkgs; [ 
-    libsForQt5.qtstyleplugin-kvantum 
+    # Theme packages
+    #libsForQt5.qtstyleplugin-kvantum 
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
+
+    # dolphin packages
+    kdePackages.dolphin               # dolphin filemanager 
+    kdePackages.dolphin-plugins       # dolphin filemanager sugar
     kdePackages.kio
     kdePackages.kio-fuse              # to mount remote filesystems via FUSE
     kdePackages.kio-extras            # extra protocols support (sftp, fish and more)
-    kdePackages.dolphin               # dolphin filemanager 
-    kdePackages.dolphin-plugins       #dolphin filemanager sugar
-    kdePackages.qtstyleplugin-kvantum
-
-    #kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
-    #latte-dock                       # kde framework dock panel, kinda stinky
+    kdePackages.filelight
 
   ];
 
+  # Fonts
   fonts.packages = with pkgs; [ 
     nerd-fonts.fira-code
     nerd-fonts.caskaydia-mono
@@ -41,7 +44,7 @@
   services.udisks2.enable = true;
   security.polkit.enable = true;
 
-  # i dont like this, didnt prevent crashes of kde shell
+  # i dont like this, didnt prevent crashes of kde shell even tho it was the proposed solution
   boot.extraModprobeConfig = ''
     options nvidia_drm modeset=1
     options nvidia_drm fbdev=1
