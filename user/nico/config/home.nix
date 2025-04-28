@@ -8,10 +8,10 @@
     programs.bash.enable = true;
 
     programs.git = {
-    enable = true;
-    userName  = "Nico Nicklis";
-    userEmail = "nico.nicklis@icloud.com";
-  };
+      enable = true;
+      userName  = "Nico Nicklis";
+      userEmail = "nico.nicklis@icloud.com";
+    };
 
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "23.05";

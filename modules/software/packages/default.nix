@@ -49,7 +49,7 @@
 	tldr
 	fd
 	ack
-	#python39 # added python (for sshuttle)
+  python3
 	restic
 	jdupes
 	ventoy

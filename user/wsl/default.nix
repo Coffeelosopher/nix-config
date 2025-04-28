@@ -1,6 +1,5 @@
 { config, pkgs, username, ... }: {
 	imports = [
-		./variables.nix
 		../../modules/software/shell/zsh.nix
 	];
 

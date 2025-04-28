@@ -1,4 +1,4 @@
-{ config, pkgs, userName, ... }: {
+{ config, pkgs, username, ... }: {
   imports = [ 
     #./default.nix
     #./config/home.nix # unfinished not working home manager config
@@ -8,7 +8,7 @@
     #../../modules/services/syncthing/default.nix
   ];
 
-  users.users.${userName}= {
+  users.users.${username}= {
    packages = with pkgs; [
 
         starship # terminal prompt

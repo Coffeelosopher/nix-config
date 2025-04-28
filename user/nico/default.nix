@@ -1,14 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, username, ... }: {
   imports = [
-    ./variables.nix
     ../../modules/software/shell/zsh.nix
   ];
 
-  #users.users."${config.userName}"= {
-  #  packages = with pkgs; [ ];
-  #};
-
-  users.users."${config.userName}"= {
+  users.users."${username}"= {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "private poweruser";

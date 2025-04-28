@@ -6,7 +6,7 @@
     ./hardware.nix
 
     # Base
-      ../modules/base/server.nix
+    ../../modules/base/server.nix
 
     # Software
     ## virtualisation
@@ -17,7 +17,7 @@
     ../../modules/software/packages/azure.nix
 
     ## Editor
-    ../../modules/software/editors/neovim/nvchad.nix
+    ../../modules/software/editors/neovim/default.nix
   ];
 
   services.openssh.enable = true;
@@ -34,9 +34,9 @@
   system.stateVersion = "23.05";
 
   # Keymap + Keyboard variant
-  services.xserver = {
+  services.xserver.xkb = {
       layout = "uk";
-      xkbVariant = "";
+      variant = "";
   };
 
   boot.tmp.cleanOnBoot = true;

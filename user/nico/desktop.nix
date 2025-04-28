@@ -1,11 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, username, ... }: {
   imports = [ 
     ./default.nix
-    ../../modules/software/vpn/mullvad/default.nix
-    ../../modules/services/syncthing/default.nix
   ];
 
-  users.users.nico = {
+  users.users.username = {
    packages = with pkgs; [ ];
   };
 }

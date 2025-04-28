@@ -19,13 +19,13 @@
           ];
       };
         
-      axiom = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/axiom/default.nix
-          determinate.nixosModules.default
-        ];
-      };
+      #axiom = nixpkgs.lib.nixosSystem {
+      #  system = "x86_64-linux";
+      #  modules = [
+      #    ./hosts/axiom/default.nix
+      #    determinate.nixosModules.default
+      #  ];
+      #};
 
       #conan = nixpkgs.lib.nixosSystem {
       #  system = "x86_64-linux";

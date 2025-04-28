@@ -2,8 +2,7 @@
 
 {
   _module.args = {
-    userName = "nico";
-    amogus = "nixos";
+    username = "nico";
   };
 
   # SSHD
@@ -20,7 +19,7 @@
 
   imports = [
     # Host specific
-    ($modulesPath + "/lenovo/thinkpad/t480/default.nix")
+    #($modulesPath + "/lenovo/thinkpad/t480/default.nix")
 
     # System Base/Type
     ../../modules/base/desktop.nix

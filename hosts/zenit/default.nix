@@ -1,6 +1,6 @@
 { config, lib, pkgs, modulesPath, ... } : {
   _module.args = {
-    userName = "nico";
+    username = "nico";
   };
 
   # SSHD

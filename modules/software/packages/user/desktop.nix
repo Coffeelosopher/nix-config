@@ -1,4 +1,4 @@
-{ config, pkgs, userName, ... }: 
+{ config, pkgs, username, ... }: 
 
 {
   imports = [ 
@@ -18,7 +18,7 @@
     binfmt = true;
   };
 services.mullvad-vpn.enable = true;
-  users.users.${userName}= {
+  users.users.${username}= {
    packages = with pkgs; [
       mullvad-vpn
 
