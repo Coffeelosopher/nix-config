@@ -43,6 +43,9 @@
     ## Gaming
     ../../modules/software/gaming/default.nix
 
+    ## Game Development
+    ../../modules/software/packages/user/unity.nix
+
     # Container
     #../../modules/software/virtualisation/container/docker/default.nix
     #../../modules/software/virtualisation/container/docker/watchtower.nix
