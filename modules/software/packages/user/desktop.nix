@@ -1,6 +1,5 @@
-{ config, pkgs, username, ... }: 
+{ config, pkgs, username, ... } : {
 
-{
   imports = [ 
     ./default.nix
     #./config/home.nix # unfinished not working home manager config
