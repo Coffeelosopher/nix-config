@@ -26,7 +26,7 @@ services.mullvad-vpn.enable = true;
         bluetui
         pulsemixer
         timeshift
-        gimp
+        #gimp
         gtk3
         gearlever
         neovide
