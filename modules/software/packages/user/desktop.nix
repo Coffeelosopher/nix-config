@@ -25,6 +25,7 @@ services.mullvad-vpn.enable = true;
         bluetui
         pulsemixer
         timeshift
+        darktable # lightroom alternative
         #gimp
         gtk3
         gearlever
