@@ -30,6 +30,7 @@ services.mullvad-vpn.enable = true;
         gtk3
         gearlever
         neovide
+        qemu
         koodo-reader # ebook reader
         alacritty
         starship # terminal prompt
