@@ -16,10 +16,12 @@
     enable = true;
     binfmt = true;
   };
-services.mullvad-vpn.enable = true;
+
   users.users.${username}= {
    packages = with pkgs; [
-      mullvad-vpn
+
+        qemu
+        quickemu
 
         easyeffects
         bluetui
@@ -30,8 +32,6 @@ services.mullvad-vpn.enable = true;
         gtk3
         gearlever
         neovide
-        qemu
-        quickemu
         koodo-reader # ebook reader
         alacritty
         starship # terminal prompt
