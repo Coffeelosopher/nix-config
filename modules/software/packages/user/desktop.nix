@@ -31,6 +31,7 @@ services.mullvad-vpn.enable = true;
         gearlever
         neovide
         qemu
+        quickemu
         koodo-reader # ebook reader
         alacritty
         starship # terminal prompt
