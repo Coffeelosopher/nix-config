@@ -6,6 +6,6 @@
     isNormalUser = true;
     description = "Nico Nicklis";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ inkscape ];
   };
 }
