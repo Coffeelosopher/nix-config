@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }: {
 
-{
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["${username}"];
   # Add user to libvirtd group
-  # users.users.<YOURUSERNAME>.extraGroups = [ "libvirtd" ];
+  users.users.${username}.extraGroups = [ "libvirtd" ];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
@@ -16,7 +17,15 @@
     spice-protocol
     win-virtio
     win-spice
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
+    virtiofsd
+
+  # UEFI Boot script 
+   (pkgs.writeShellScriptBin "qemu-system-x86_64-uefi" ''
+     qemu-system-x86_64 \
+       -bios ${pkgs.OVMF.fd}/FV/OVMF.fd \
+       "$@"
+   '')
   ];
 
   # Manage the virtualisation services
@@ -34,5 +43,7 @@
     };
     spiceUSBRedirection.enable = true;
   };
+
   services.spice-vdagentd.enable = true;
+
 }

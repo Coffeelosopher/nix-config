@@ -1,7 +1,12 @@
 { config, pkgs, ... }: {
 
   environment.systemPackages = with pkgs; [
-    prismlauncher
-    zulu21 # java 21
+    (prismlauncher.override {
+      jdks = [
+        temurin-bin-21
+        temurin-bin-8
+        temurin-bin-17
+      ];
+    })
   ];  
 }

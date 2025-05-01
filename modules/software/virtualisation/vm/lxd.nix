@@ -1,1 +1,6 @@
-{ config, pkgs, ... }: { imports = [ ../container/lxd/default.nix ]; }
+{ config, pkgs, ... } : { 
+
+  imports = [ 
+    ../container/lxd/default.nix 
+  ]; 
+}

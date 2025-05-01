@@ -51,8 +51,10 @@
     #../../modules/software/virtualisation/container/docker/watchtower.nix
     #../../modules/software/virtualisation/container/lxd/default.nix
 
+
     ## Virtual Machines
     ../../modules/software/packages/atos.nix
+    ../../modules/software/virtualisation/vm/libvirt.nix
 
     ## Azure
     #../../modules/software/packages/azure.nix
@@ -67,6 +69,7 @@
 
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix
+    ../../modules/software/vpn/mullvad/default.nix
     #../modules/software/vpn/zerotier/default.nix
 
 
