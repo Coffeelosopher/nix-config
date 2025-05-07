@@ -11,7 +11,7 @@ in
       # User
       username = "nico";
       
-      horstname = JSON.horstname;
+      horstname = JSON.hostname;
       ursaname = JSON.username;
       data1 = JSON.data[0];
     };
