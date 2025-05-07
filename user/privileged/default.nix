@@ -6,7 +6,7 @@
   users.users."${username}"= {
     isNormalUser = true;
     shell = pkgs.zsh;
-    description = "private poweruser";
+    description = "privileged user";
     extraGroups =
     [ "networkmanager" "network" "wheel" "lxd" "docker" "libvirtd" "syncthing" ];
   };
