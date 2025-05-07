@@ -29,13 +29,13 @@
       #  ];
       #};
 
-      #conan = nixpkgs.lib.nixosSystem {
-      #  system = "x86_64-linux";
-      #  modules = [
-      #    ./hosts/conan/default.nix
-      #    determinate.nixosModules.default
-      #  ];
-      #};
+      conan = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/conan/default.nix
+          determinate.nixosModules.default
+        ];
+      };
 
       mblu = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
