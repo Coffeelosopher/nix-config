@@ -1,4 +1,5 @@
 { config, lib, pkgs, modulesPath, ... }: 
+
 let
   JSON = builtins.fromJSON (builtins.readFile ./test.json);
 in 
@@ -11,9 +12,10 @@ in
       # User
       username = "nico";
       
-      horstname = JSON.hostname;
-      ursaname = JSON.username;
-      data1 = (JSON.data)[0];
+      var1 = JSON.hostname;
+      var2 = JSON.username;
+      #data1 = JSON.data[0];
+      data1 = builtins.elemAt JSON.data 0;
     };
   };
 }
