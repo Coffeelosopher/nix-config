@@ -16,9 +16,6 @@
     ../../modules/software/virtualisation/container/docker/watchtower.nix
     ../../modules/software/virtualisation/container/lxd/default.nix
 
-    # Services
-    ## Syncthing
-    #../../modules/services/syncthing/default.nix
 
     # Housekeeping
     ## garbage collection
