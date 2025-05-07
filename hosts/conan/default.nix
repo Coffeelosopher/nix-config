@@ -1,4 +1,11 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, lib, pkgs, modulesPath, ... }: 
+
+{
+  # Variables
+  _module.args = {
+    username = "nico";
+  };
+
   imports = [
     # Host specific
     ./network.nix
