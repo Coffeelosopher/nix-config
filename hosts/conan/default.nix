@@ -1,18 +1,9 @@
 { config, lib, pkgs, modulesPath, ... }: 
 
 {
-  # Variables
-  _module.args = {
-    variables = {
-      # Hostname
-      hostname = "conan";
-      # User
-      username = "nico";
-    };
-  };
-
   imports = [
     # Host specific
+    ./variables.nix
     ./network.nix
     ./hardware.nix
 
