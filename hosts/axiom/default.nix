@@ -25,7 +25,7 @@
     ../../modules/base/desktop.nix
 
     # User
-    ../../user/nico/default.nix
+    ../../user/privileged/default.nix
 
     # Modules
     ## Software

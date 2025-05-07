@@ -5,7 +5,7 @@
     ./hardware.nix
 
     # User
-    ../../user/nico/default.nix
+    ../../user/privileged/default.nix
 
     # Base
     ../../modules/base/server.nix

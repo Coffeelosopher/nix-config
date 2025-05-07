@@ -20,7 +20,7 @@
     #../../modules/services/netdata.nix
     #../../modules/software/vpn/mullvad/default.nix
     # User
-    ../../user/nico/desktop.nix
+    ../../user/privileged/desktop.nix
 
     #Syncthing
     ../../modules/services/syncthing/default.nix
