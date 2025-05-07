@@ -1,8 +1,9 @@
 { config, pkgs, lib, ... }: {
 
   imports = [ 
-  ../../modules/software/shell/zsh.nix
-  ../../modules/software/packages/default.nix
+    ../../modules/software/shell/zsh.nix
+    ../../modules/software/packages/default.nix
+    ../../modules/software/vpn/tailscale/default.nix
   ];
 
   # Systemd Boot add memtest and netbootxyz

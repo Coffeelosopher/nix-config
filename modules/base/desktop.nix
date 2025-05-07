@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/software/shell/zsh.nix
     ../../modules/software/packages/default.nix
   ];
 
