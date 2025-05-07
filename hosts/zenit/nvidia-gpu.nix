@@ -1,5 +1,6 @@
-{ config, lib, pkgs, modulesPath, ... } : {
+{ config, lib, pkgs, modulesPath, ... }:
 
+{
   imports = [  ];
 
   # Enable OpenGL
@@ -11,7 +12,6 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-
     # Modesetting is required.
     modesetting.enable = true;
 
@@ -40,7 +40,4 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-
 }
-
-
