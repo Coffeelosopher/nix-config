@@ -52,16 +52,6 @@
     tsn    = "ts netcheck";
     tsnc   = "tsn";
 
-    #Media
-    # YT-dlp
-    # Disabled Options: --downloader aria2c
-    yt-download-video       = "yt-download-video-1080";
-    yt-dlp-defaults         = "yt-dlp -a - -N 8 -P 'temp:/tmp' --embed-metadata --embed-thumbnail --restrict-filenames --sponsorblock-mark all --sponsorblock-remove sponsor,selfpromo";
-    yt-dlp-defaults-video   = "yt-dlp-defaults --merge-output-format mp4";
-    yt-download-video-max   = "yt-dlp-defaults-video -S 'vcodec:h265'";
-    yt-download-video-480   = "yt-dlp-defaults-video -S 'vcodec:h265,res:480'";
-    yt-download-video-1080  = "yt-dlp-defaults-video -S 'vcodec:h265,res:1080'";
-    yt-download-audio       = "yt-dlp-defaults -x --audio-format mp3 --audio-quality 0";
   };
 }
 

@@ -31,6 +31,8 @@
     ## garbage collection
     ../../modules/houskeeping/gc/default.nix
 
+    ## Aliases 
+    ../../modules/software/shell/alias/default.nix
   ];
 
   # HostName and Stateversion
