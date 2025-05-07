@@ -23,15 +23,15 @@
 
   services.openssh.enable = true;
   users.users.root.openssh.authorizedKeys.keys = [ 
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKSBSNv+Trea4+rX7bsRB7J9V49RjWXAkpDTqAos72EC conan@RazerBlade"
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO9DEqbD9Q7ZoTww27wQU2WrHkd39S3A1h8pkXMB22N6 nico@fedora"
-  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQpIsD8IHFqmhL3aeqnIYiUlWQOj8juB7ooc1Ylz3ql Nico@Gaming-Rig"
-  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3n6T3hNhn/LYJ6zc8OWdoVzYJNYC7jPWKhjJzqio6d nixos@nixos"
+	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
+	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKSBSNv+Trea4+rX7bsRB7J9V49RjWXAkpDTqAos72EC conan@RazerBlade"
+	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO9DEqbD9Q7ZoTww27wQU2WrHkd39S3A1h8pkXMB22N6 nico@fedora"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQpIsD8IHFqmhL3aeqnIYiUlWQOj8juB7ooc1Ylz3ql Nico@Gaming-Rig"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3n6T3hNhn/LYJ6zc8OWdoVzYJNYC7jPWKhjJzqio6d nixos@nixos"
   ];
 
   # hostName
-  networking.hostName = "mblu";
+  networking.hostName = "${variables.hostname}";
   system.stateVersion = "23.05";
 
   # Keymap + Keyboard variant
