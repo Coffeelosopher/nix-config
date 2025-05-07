@@ -7,13 +7,6 @@
     nixos-rebuild-flake = "nixos-rebuild switch --flake 'github:coffeelosopher/nix-config#${variables.hostname}' --refresh";
     testung = "echo '${variables.var1}, ${variables.var2}, ${variables.data1}'";
 
-
-    # SSH Config Stuff
-    jssh     = "ssh -J hub";
-    jsh      = "jssh";
-    sshuttle = "sshuttle -N -v --disable-ipv6  ";
-    sshfs    = "sshfs -o reconnect,sshfs_sync ";
-
     # DSH Config
     dsh    = "tmux-cssh";
     dshnix = "tmux-cssh bb blu1 hub oc-arm r720 unxi{1..2} aspire steiermarknuc vinix";
@@ -37,8 +30,6 @@
     nano = "nano --tabstospaces --showcursor --autoindent --linenumbers --backup --backupdir=/tmp/";
     ssh  = "ssh -o 'ConnectionAttempts 1800'";
 
-    # Croc Relay
-    croc = "croc --relay hub.server.hostedbymyself.de --pass xXEr4mNpTzTVnnos";
 
     # Tailscale 
     ts     = "tailscale";

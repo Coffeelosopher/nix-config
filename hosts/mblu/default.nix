@@ -4,6 +4,7 @@
     ./network.nix
     ./proxy.nix
     ./hardware.nix
+    ./variables.nix
 
     # Base
     ../../modules/base/server.nix
