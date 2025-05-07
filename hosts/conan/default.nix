@@ -7,19 +7,8 @@
     # User
     ../../user/nico/default.nix
 
-    # Modules
     # Base
     ../../modules/base/server.nix
-
-    ## Container
-    ../../modules/software/virtualisation/container/docker/default.nix
-    ../../modules/software/virtualisation/container/docker/watchtower.nix
-    ../../modules/software/virtualisation/container/lxd/default.nix
-
-
-    # Housekeeping
-    ## garbage collection
-    ../../modules/houskeeping/gc/default.nix
 
     # Software
     ## Packages
@@ -31,6 +20,16 @@
 
     ## Editor 
     ../../modules/software/editors/neovim/default.nix
+
+
+    # Container
+    ../../modules/software/virtualisation/container/docker/default.nix
+    ../../modules/software/virtualisation/container/docker/watchtower.nix
+    ../../modules/software/virtualisation/container/lxd/default.nix
+
+    # Housekeeping
+    ## garbage collection
+    ../../modules/houskeeping/gc/default.nix
 
   ];
 

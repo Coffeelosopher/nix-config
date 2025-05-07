@@ -1,4 +1,6 @@
-{ config, lib, pkgs, modulesPath, ... } : {
+{ config, lib, pkgs, modulesPath, ... }:
+
+{
   _module.args = {
     username = "nico";
   };
