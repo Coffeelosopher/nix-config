@@ -1,9 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, variables, ... }: {
 
   environment.shellAliases = {
     # NIXOS Build
     nix          = "nix --extra-experimental-features ' nix-command flakes ' ";
     flake-update = "nix flake update --commit-lock-file && git push";
+    nixos-rebuild-flake = "nixos-rebuild switch --flake "github:coffeelosopher/nix-config#${variables.hostname}" --refresh
 
     # SSH Config Stuff
     jssh     = "ssh -J hub";

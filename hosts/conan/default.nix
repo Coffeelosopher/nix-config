@@ -3,7 +3,12 @@
 {
   # Variables
   _module.args = {
-    username = "nico";
+    variables = {
+      # Hostname
+      hostname = "conan";
+      # User
+      username = "nico";
+    };
   };
 
   imports = [
