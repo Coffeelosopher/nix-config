@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: 
+
+{
+  imports = [
+    ../../modules/software/packages/default.nix
+  ];
 
   # SSHD
   services.openssh = {

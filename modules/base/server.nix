@@ -2,7 +2,7 @@
 
   imports = [ 
   ../../modules/software/shell/zsh.nix
-
+  ../../modules/software/packages/default.nix
   ];
 
   # Systemd Boot add memtest and netbootxyz
