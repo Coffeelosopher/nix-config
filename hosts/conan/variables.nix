@@ -14,8 +14,7 @@ in
       
       var1 = JSON.hostname;
       var2 = JSON.username;
-      #data1 = JSON.data[0];
-      data1 = builtins.elemAt JSON.data 2;
+      data1 = builtins.elemAt JSON.data.more 2;
     };
   };
 }
