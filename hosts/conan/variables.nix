@@ -13,7 +13,7 @@ in
       
       horstname = JSON.horstname;
       ursaname = JSON.username;
-      data1 = JSON.data.[0]
+      data1 = JSON.data[0]
     };
   };
 }
