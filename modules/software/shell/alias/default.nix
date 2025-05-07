@@ -5,7 +5,7 @@
     nix          = "nix --extra-experimental-features ' nix-command flakes ' ";
     flake-update = "nix flake update --commit-lock-file && git push";
     nixos-rebuild-flake = "nixos-rebuild switch --flake 'github:coffeelosopher/nix-config#${variables.hostname}' --refresh";
-    testung = "echo '${variables.horstname}, ${variables.ursaname}, ${variables.data1}'";
+    testung = "echo '${variables.var1}, ${variables.var2}, ${variables.data1}'";
 
 
     # SSH Config Stuff
