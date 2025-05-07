@@ -1,5 +1,10 @@
 { config, pkgs, lib, ... }: {
 
+  imports = [ 
+  ../../modules/software/shell/zsh.nix
+
+  ];
+
   # Systemd Boot add memtest and netbootxyz
   boot.loader = {
     timeout = lib.mkDefault 1;
