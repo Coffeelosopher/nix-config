@@ -9,9 +9,10 @@
     description = "privileged user";
     extraGroups =
     [ "networkmanager" "network" "wheel" "lxd" "docker" "libvirtd" "syncthing" ];
+
+    openssh.authorizedKeys.keys = [
+     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
+    ];
   };
 
-  users.users.${username}.openssh.authorizedKeys.keys = [
-   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
-  ];
 }
