@@ -7,9 +7,7 @@ in
 {
   _module.args = {
     variables = {
-      # Hostname
       hostname = "conan";
-      # User
       username = "nico";
       
       var1 = JSON.hostname;
