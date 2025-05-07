@@ -1,6 +1,8 @@
 { config, pkgs, ... }: {
 
-  imports = [ ];
+  imports = [
+    ./alias/default.nix
+  ];
 
   programs.starship.enable = true;
   users.defaultUserShell = pkgs.zsh;
