@@ -18,7 +18,7 @@
 
     # Services
     ## Syncthing
-    ../../modules/services/syncthing/default.nix
+    #../../modules/services/syncthing/default.nix
 
     # Housekeeping
     ## garbage collection
@@ -31,6 +31,9 @@
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix
     #../modules/software/vpn/zerotier/default.nix
+
+    ## Editor 
+    ../../modules/software/editors/neovim/default.nix
 
   ];
 
@@ -48,20 +51,8 @@
     variant = "";
   };
 
-#  services.throttled = {
-#    enable = true;
-#  };
  users.users.root.openssh.authorizedKeys.keys = [
 	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKSBSNv+Trea4+rX7bsRB7J9V49RjWXAkpDTqAos72EC conan@RazerBlade"
 	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
  ];
-
-
-#services.vsftpd = {
-#    enable = true;
-#    localUsers = true;
-#    userlist = ["root"];
-#    writeEnable = true;
-#    localRoot = "/var/ftp";
-#  };
 }
