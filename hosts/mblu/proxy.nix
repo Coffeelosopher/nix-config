@@ -65,7 +65,7 @@
       enableACME = true;
       forceSSL = true;
       locations."/" = {
-        proxyPass = "http://localhost:8080";
+        proxyPass = "http://localhost:5984";
         proxyWebsockets = true; # needed if you need to use WebSocket
         extraConfig =
           # required when the target is also TLS server with multiple hosts
