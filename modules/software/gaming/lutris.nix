@@ -4,6 +4,7 @@
 
     lutris
     wine
+    protonplus
 
     (lutris.override {
       extraLibraries =  pkgs: [
