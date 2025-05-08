@@ -19,9 +19,11 @@
 
   imports = [
     # Local
-    ./nvidia-gpu.nix
     ./packages.nix
     ./hardware.nix
+
+    # GPU driver 
+    ../../modules/hardware/nvidia-gpu.nix
 
     # System Base/Type
     ../../modules/base/desktop.nix
