@@ -6,9 +6,11 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, home-manager,... }@inputs: {
 
     nixosConfigurations = {
       
@@ -34,6 +36,15 @@
         modules = [
           ./hosts/conan/default.nix
           determinate.nixosModules.default
+          home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.${variables.username}= ./home.nix;
+
+              # Optionally, use home-manager.extraSpecialArgs to pass
+              # arguments to home.nix
+            }
         ];
       };
 
