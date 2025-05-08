@@ -1,12 +1,19 @@
 { config, pkgs, variables, ... }:
 
+let
+  dotfilesPath = ../dotfiles/.config;
+in {
 {
-  xdg.configFile = {
-    enable = true;
-    executable = false;
-    source = /home/
+  #home.username = "myuser";
+  #home.homeDirectory = "/home/myuser";
 
-  };
+  xdg.enable = true;
+
+  xdg.configFile."toolA".source = "${dotfilesPath}/toolA";
+  xdg.configFile."toolB".source = "${dotfilesPath}/toolB";
+
+  home.stateVersion = "23.11";
+}
 
 ####### EXMAPLE  from this cute world #######
 
