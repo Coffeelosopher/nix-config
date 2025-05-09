@@ -60,6 +60,7 @@
 	ncdu
 	bat
 	bat-extras.batman  	
+  ntfs3g
 
 	# Other System Stuff
 	multipath-tools
