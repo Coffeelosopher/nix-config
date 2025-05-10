@@ -36,16 +36,16 @@
         modules = [
           ./hosts/conan/default.nix
           determinate.nixosModules.default
-          home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              #home-manager.users.${variables.username}= ./home.nix;
-              home-manager.users.joe= ./home.nix;
+          #home-manager.nixosModules.home-manager
+          #  {
+          #    home-manager.useGlobalPkgs = true;
+          #    home-manager.useUserPackages = true;
+          #    #home-manager.users.${variables.username}= ./home.nix;
+          #    home-manager.users.joe= ./home.nix;
 
-              # Optionally, use home-manager.extraSpecialArgs to pass
-              # arguments to home.nix
-            }
+          #    # Optionally, use home-manager.extraSpecialArgs to pass
+          #    # arguments to home.nix
+          #  }
         ];
       };
 

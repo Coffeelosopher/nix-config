@@ -16,6 +16,7 @@
     #libsForQt5.qtstyleplugin-kvantum 
     kdePackages.qtstyleplugin-kvantum
     kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
+    kdePackages.kdeconnect-kde
 
     # dolphin packages
     kdePackages.dolphin               # dolphin filemanager 
