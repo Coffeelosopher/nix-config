@@ -4,5 +4,6 @@
   ./lutris.nix
   ./minecraft.nix
   ];
-
+#### experiments ####
+  programs.gamemode.enable = true;
 }
