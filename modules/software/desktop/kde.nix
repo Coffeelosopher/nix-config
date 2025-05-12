@@ -8,15 +8,16 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-
   services.xserver.enable = false; # disabled for wayland only setup
+
+  # kde conntect setup
+  programs.kdeconnect.enable = true;
 
   environment.systemPackages = with pkgs; [ 
     # Theme packages
     #libsForQt5.qtstyleplugin-kvantum 
     kdePackages.qtstyleplugin-kvantum
     kdePackages.koi                  # plasma theme toggle thingy ... is okay... 
-    kdePackages.kdeconnect-kde
 
     # dolphin packages
     kdePackages.dolphin               # dolphin filemanager 

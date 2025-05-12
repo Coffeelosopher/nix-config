@@ -81,10 +81,6 @@
   swapDevices = [ { device = "/dev/disk/by-uuid/5b23acb8-756e-4f38-9af1-26f7feb03f29"; } ];
   boot.resumeDevice = "/dev/disk/by-uuid/5b23acb8-756e-4f38-9af1-26f7feb03f29";
 
-
-
-5b23acb8-756e-4f38-9af1-26f7feb03f29 
-
   # (Optional) Workaround for systemd user session freeze hang:
   systemd.services."systemd-suspend".environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
 

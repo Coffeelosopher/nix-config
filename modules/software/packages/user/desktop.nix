@@ -22,7 +22,10 @@
 
         qemu
         quickemu
-
+        #gpu-screen-recorder-gtk # flatpak because nixpkgs is out of date
+        losslesscut-bin # cuts videos
+        mousai # shazam for linux
+        pinokio # ai tool installer?
         easyeffects
         bluetui
         pulsemixer
@@ -34,13 +37,12 @@
         neovide
         koodo-reader # ebook reader
         alacritty
+        ghostty
         starship # terminal prompt
         flatpak
         mpv
         gnome-software
         piper # Mouse utility
-        kitty
-        alacritty
         firefox
         thunderbird
         vscode
@@ -73,52 +75,4 @@
         openconnect # anyconnect alternative... bitte?
       ];
   };
-
-  # EXCLUDE KDE PLASMA PACKAGES
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [  ];
-
-# allowing "unsafe" packages overwrite
-# nixpkgs.config.permittedInsecurePackages = [
-#                "electron-12.2.3"
-# ];
-
- # modified default ZSH 
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [ zsh ];
-
-  # zsh config altered for unstable channel
-  programs.zsh = {
-    enable = true;
-    setOptions = [ "HIST_IGNORE_DUPS" "SHARE_HISTORY" "HIST_FCNTL_LOCK" ];
-    enableCompletion = true;
-    enableBashCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "docker"
-        "docker-compose"
-        "lxd"
-        "wakeonlan"
-        "zsh-navigation-tools"
-        "zsh-interactive-cd"
-        # "tmuxinator"
-        # "tmux-cssh"
-        # "tmux"
-        "timer"
-        "systemd"
-        "systemadmin" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/systemadmin
-      ];
-      theme = "mh";
-    };
-  };
-  # programs.starship.enable = true;
-  environment.systemPackages = with pkgs; [ fzf ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.caskaydia-mono
-    nerd-fonts.fira-code
-  ];
 }
