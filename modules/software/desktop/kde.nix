@@ -25,6 +25,9 @@
     kdePackages.kio
     kdePackages.kio-fuse              # to mount remote filesystems via FUSE
     kdePackages.kio-extras            # extra protocols support (sftp, fish and more)
+    kdePackages.kcolorpicker
+    kdePackages.kcolorchooser
+    kdePackages.discover
 
     # Other
     kdePackages.filelight

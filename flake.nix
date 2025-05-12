@@ -8,17 +8,20 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
   };
 
-  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, home-manager,... }@inputs: {
+  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, home-manager, nix-flatpak, ... }@inputs: {
 
     nixosConfigurations = {
       
       zenit = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+
             ./hosts/zenit/default.nix
             determinate.nixosModules.default
+            nix-flatpak.nixosModules.nix-flatpak
           ];
       };
         

@@ -1,19 +1,32 @@
-{ pkgs, username, ... }: {
+{ lib, pkgs, username, ... }: {
 
 
-  users.users.${username}= {
-    packages = with pkgs; [
-      flatpak
-      #gnome-software
-      kdePackages.discover
-    ];
-  };
+  services.flatpak.enable = true;
+  
 
-  #systemd.services.configure-flathub-repo = {
-  #  wantedBy = [ "default.target" ];
-  #  path = [ pkgs.flatpak ];
-  #  script = ''
-  #    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  #  '';
-  #};
+  # Add a new remote. Keep the default one (flathub)
+  services.flatpak.remotes = lib.mkOptionDefault [{
+    name = "flathub-beta";
+    location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+  }];
+
+  services.flatpak.update.auto.enable = false;
+  services.flatpak.uninstallUnmanaged = false;
+
+  # Add here the flatpaks you want to install
+  services.flatpak.packages = [
+      "ca.edestcroix.Recordbox"
+      "camp.nook.nookdesktop"
+      "com.brave.Browser"
+      "com.dec05eba.gpu_screen_recorder"
+      "com.github.tchx84.Flatseal"
+      "com.spotify.Client"
+      "com.vixalien.sticky"
+      "io.github.jeffshee.Hidamari"
+      "io.github.peazip.PeaZip"
+      "org.gimp.GIMP"
+      "org.gimp.GIMP.HEIC"
+      "org.kde.kolourpaint"
+      "org.upscayl.Upscayl "
+  ];
 }

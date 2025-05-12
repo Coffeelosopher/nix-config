@@ -7,11 +7,6 @@
     #nixos-rebuild-flake = "nixos-rebuild switch --flake 'github:coffeelosopher/nix-config#${variables.hostname}' --refresh";
     #testung = "echo '${variables.var1}, ${variables.var2}, ${variables.data1}'";
 
-    # DSH Config
-    dsh    = "tmux-cssh";
-    dshnix = "tmux-cssh bb blu1 hub oc-arm r720 unxi{1..2} aspire steiermarknuc vinix";
-    dshall = "dshnix  "; # and others
-
     # My Command overwrites
     lsblk = "lsblk -o NAME,LABEL,SIZE,TYPE,MOUNTPOINTS";
     ncdu  = "gdu";
@@ -24,7 +19,6 @@
     duf  = "duf -hide-fs tmpfs,devtmpfs,vfat -theme ansi";
     df   = "duf";
     disk = "duf ./";
-    find = "fd -a";
     btop = "btop -p 0 -t";
     bat  = "bat --theme Coldark-Cold -pn";
     nano = "nano --tabstospaces --showcursor --autoindent --linenumbers --backup --backupdir=/tmp/";

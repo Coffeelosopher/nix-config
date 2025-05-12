@@ -49,7 +49,7 @@
 	duf
 	trash-cli
 	tldr
-	fd
+	#fd
 	ack
   python3
 	restic
