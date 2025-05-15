@@ -1,5 +1,6 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: 
 
+{
   imports = [ 
     ../../modules/software/shell/zsh.nix
     ../../modules/software/packages/default.nix
@@ -26,7 +27,7 @@
 
   # root ssh key
   users.users.root.openssh.authorizedKeys.keys = [
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
+  	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
   ];
 
   # auto optimise store
@@ -73,18 +74,6 @@
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
-
-  ######### MISC ###########
-  
-  
-  # Automatic Garbage Collection 
-  #  nix.gc = {
-  #    automatic = true;
-  #    dates = "weekly";
-  #    options = "--delete-older-than 30d";
-  #  };
-
-
 }
 
 

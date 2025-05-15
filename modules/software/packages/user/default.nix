@@ -1,4 +1,6 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, username, ... }: 
+
+{
   imports = [ 
     #./default.nix
     #./config/home.nix # unfinished not working home manager config
@@ -9,34 +11,25 @@
   ];
 
   users.users.${username}= {
-   packages = with pkgs; [
+    packages = with pkgs; [
 
-        starship # terminal prompt
-        neovim
-        mpv
-        bitwarden-cli
-        syncthing
-        duplicati
-        bleachbit
-        yt-dlp
+      starship # terminal prompt
+      neovim
+      mpv
+      bitwarden-cli
+      syncthing
+      duplicati
+      bleachbit
+      yt-dlp
 
-        pdfarranger
+      pdfarranger
 
-        cmus
-        spotify-player
+      cmus
+      spotify-player
 
-
-        # packages to check out
-        #nixpkgs-fmt # vscode wirft error, package instlal hat nicht geholfen
-        #openconnect # anyconnect alternative... bitte?
-      ];
+      # packages to check out
+      #nixpkgs-fmt # vscode wirft error, package instlal hat nicht geholfen
+      #openconnect # anyconnect alternative... bitte?
+    ];
   };
-
-  ## EXPERIMENTS, move later TODO ## 
-
-# allowing "unsafe" packages overwrite
-#nixpkgs.config.permittedInsecurePackages = [
-#               "electron-12.2.3"
-#               "electron-19.1.9"
-#];
 }

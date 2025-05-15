@@ -1,8 +1,7 @@
-{ lib, pkgs, username, ... }: {
+{ lib, pkgs, username, ... }: 
 
-
+{
   services.flatpak.enable = true;
-  
 
   # Add a new remote. Keep the default one (flathub)
   services.flatpak.remotes = lib.mkOptionDefault [{
@@ -15,18 +14,18 @@
 
   # Add here the flatpaks you want to install
   services.flatpak.packages = [
-      "ca.edestcroix.Recordbox"
-      "camp.nook.nookdesktop"
-      "com.brave.Browser"
-      "com.dec05eba.gpu_screen_recorder"
-      "com.github.tchx84.Flatseal"
-      "com.spotify.Client"
-      "com.vixalien.sticky"
-      "io.github.jeffshee.Hidamari"
-      "io.github.peazip.PeaZip"
-      "org.gimp.GIMP"
-      "org.gimp.GIMP.HEIC"
-      "org.kde.kolourpaint"
-      "org.upscayl.Upscayl "
+    "ca.edestcroix.Recordbox"
+    "camp.nook.nookdesktop"
+    "com.brave.Browser"
+    "com.dec05eba.gpu_screen_recorder"
+    "com.github.tchx84.Flatseal"
+    "com.spotify.Client"
+    "com.vixalien.sticky"
+    "io.github.jeffshee.Hidamari"
+    "io.github.peazip.PeaZip"
+    "org.gimp.GIMP"
+    "org.gimp.GIMP.HEIC"
+    "org.kde.kolourpaint"
+    "org.upscayl.Upscayl "
   ];
 }

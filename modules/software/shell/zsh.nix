@@ -1,5 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
 
+{
   imports = [
     ./alias/default.nix
   ];
@@ -14,7 +15,12 @@
 
   programs.zsh = {
     enable = true;
-    setOptions = [ "HIST_IGNORE_DUPS" "SHARE_HISTORY" "HIST_FCNTL_LOCK" ];
+    setOptions = [ 
+      "HIST_IGNORE_DUPS" 
+      "SHARE_HISTORY" 
+      "HIST_FCNTL_LOCK"
+    ];
+
     enableCompletion = true;
     enableBashCompletion = true;
     autosuggestions.enable = true;

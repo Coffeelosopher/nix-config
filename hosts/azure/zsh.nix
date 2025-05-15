@@ -1,6 +1,6 @@
+{ config, pkgs, ... }: 
 
-{ config, pkgs, ... }: {
-
+{
   # optional: import additional nix config files like this
   imports = [ ];
 

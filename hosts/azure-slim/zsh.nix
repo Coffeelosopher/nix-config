@@ -1,7 +1,6 @@
+{ config, pkgs, ... }: 
 
-{ config, pkgs, ... }: {
-
-  # optional: import additional nix config files like this
+{
   imports = [ ];
 
   # install Z-Shell
@@ -26,5 +25,4 @@
     # Z-shell history file handling behavior
     setOptions = [ "HIST_IGNORE_DUPS" "SHARE_HISTORY" "HIST_FCNTL_LOCK" ];
   };
-
 }

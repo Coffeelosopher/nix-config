@@ -1,9 +1,9 @@
-
 { config, pkgs, ... }:
+
 {
     services.croc = {
         enable = true;
-        pass = "xXEr4mNpTzTVnnos";
+        pass = "${secrets.croc_password}";
         openFirewall = true;
         ports = [
             9009

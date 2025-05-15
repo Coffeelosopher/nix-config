@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   system.autoUpgrade = {
     enable = true;
     persistent = true;

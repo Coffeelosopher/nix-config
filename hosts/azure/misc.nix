@@ -1,5 +1,6 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, lib, pkgs, modulesPath, ... }: 
 
+{
   # Misc Options we won't look at further
   # initial Nix-Channel version of source iso, do not change in the future
   system.stateVersion = "24.11";

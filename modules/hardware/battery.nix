@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   # Battery Management
   services = {
     thermald.enable = true;

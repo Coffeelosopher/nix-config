@@ -5,17 +5,6 @@
     username = "nico";
   };
 
-  # SSHD
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = false;
-      #X11Forwarding = true;
-    };
-  };
-
-  users.users.nico.openssh.authorizedKeys.keys = [
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" ];
 
   imports = [
     # Host specific
@@ -61,6 +50,19 @@
     # Housekeeping
     ## garbage collection
     #../../modules/houskeeping/gc/default.nix
+  ];
+
+  # SSHD
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      #X11Forwarding = true;
+    };
+  };
+
+  users.users.nico.openssh.authorizedKeys.keys = [
+  	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" 
   ];
 
   # Bootloader.
@@ -114,32 +116,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }

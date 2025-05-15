@@ -1,1 +1,5 @@
-{ config, pkgs, ... }: { virtualisation.docker.enableNvidia = true; }
+{ config, pkgs, ... }: 
+
+{ 
+  virtualisation.docker.enableNvidia = true; 
+}

@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   environment = {
     shellAliases = { update = "switch"; };
     systemPackages = with pkgs; [

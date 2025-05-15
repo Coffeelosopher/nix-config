@@ -13,6 +13,7 @@
       #X11Forwarding = true;
     };
   };
+
   # cups auto discovery experiment
   services.avahi = {
     enable = true;
@@ -21,7 +22,8 @@
   };
 
   users.users.nico.openssh.authorizedKeys.keys = [
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" ];
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com" 
+  ];
 
   imports = [
     # Local
@@ -81,8 +83,6 @@
     ../../modules/software/vpn/tailscale/default.nix
     ../../modules/software/vpn/mullvad/default.nix
     #../modules/software/vpn/zerotier/default.nix
-
-
   ];
 
   # Bootloader.
@@ -163,7 +163,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
 
 

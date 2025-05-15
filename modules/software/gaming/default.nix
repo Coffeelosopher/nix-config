@@ -1,9 +1,12 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   imports = [ 
-  ./steam.nix
-  ./lutris.nix
-  ./minecraft.nix
+    ./steam.nix
+    ./lutris.nix
+    ./minecraft.nix
   ];
+
 #### experiments ####
   programs.gamemode.enable = true;
 }

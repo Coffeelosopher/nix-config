@@ -1,5 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
 
+{
   services.restic.backups = {
     hbms-nixos = {
       initialize = true;

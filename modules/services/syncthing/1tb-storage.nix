@@ -1,4 +1,5 @@
 { config, pkgs, ... }:
+
 let
   syncthingDevices = [
     # HBMS Servers
@@ -20,7 +21,8 @@ let
     # "vinix"
     # Other Devices
   ];
-in {
+in
+{
   imports = [ ./default.nix ];
 
   # !!!

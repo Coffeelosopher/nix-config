@@ -1,18 +1,20 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, lib, pkgs, modulesPath, ... }: 
+
+{
   imports = [
 
-  # Modules
-  ./zsh.nix
-  #../../modules/software/virtualisation/container/docker/default.nix
+    # Modules
+    ./zsh.nix
+    #../../modules/software/virtualisation/container/docker/default.nix
 
-  (modulesPath + "/virtualisation/azure-common.nix")
+    (modulesPath + "/virtualisation/azure-common.nix")
 
-  # TODO read this for working nix vm
-  # https://github.com/NixOS/nixpkgs/blob/nixos-24.11/nixos/maintainers/scripts/azure-new/examples/basic/system.nix
+    # TODO read this for working nix vm
+    # https://github.com/NixOS/nixpkgs/blob/nixos-24.11/nixos/maintainers/scripts/azure-new/examples/basic/system.nix
 
-  #./network.nix
-  # Misc Coniguration that is needed but out of scope for todays presentation
-  ./misc.nix
+    #./network.nix
+    # Misc Coniguration that is needed but out of scope for todays presentation
+    ./misc.nix
   ];
   
   # Networking
@@ -57,10 +59,6 @@
     zellij            # modern terminal multiplexer
     duf               # disk usage command line tool
     nixos-generators  # Image builder for using NixOS in the cloud!
-
-    # TODO check if uneeded and delete
-    #nixfmt-classic
-    #nixos-option
   ];
 
   # makes installing unfree software possible, e.g.: discord 

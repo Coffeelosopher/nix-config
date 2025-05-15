@@ -1,5 +1,6 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, username, ... }: 
 
+{
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
@@ -21,11 +22,11 @@
     virtiofsd
 
   # UEFI Boot script 
-   (pkgs.writeShellScriptBin "qemu-system-x86_64-uefi" ''
-     qemu-system-x86_64 \
-       -bios ${pkgs.OVMF.fd}/FV/OVMF.fd \
-       "$@"
-   '')
+    (pkgs.writeShellScriptBin "qemu-system-x86_64-uefi" ''
+      qemu-system-x86_64 \
+      -bios ${pkgs.OVMF.fd}/FV/OVMF.fd \
+      "$@"
+    '')
   ];
 
   # Manage the virtualisation services
@@ -45,5 +46,4 @@
   };
 
   services.spice-vdagentd.enable = true;
-
 }

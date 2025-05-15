@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   fileSystems."/mnt/400sd1" = {
     label = "400sd1";
     options = [ "noatime" "nodiratime" "discard" "auto" "nofail" ];

@@ -1,4 +1,6 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, username, ... }: 
+
+{
   imports = [ 
     #./default.nix
     #./config/home.nix # unfinished not working home manager config
@@ -9,30 +11,25 @@
   ];
 
   users.users."${username}"= {
-   packages = with pkgs; [
+    packages = with pkgs; [
 
-        starship # terminal prompt
-        flatpak
-        flatpak-builder # not sure if needed
-        mpv
-        alacritty
-        bitwarden-cli
-        spotify-player
-        #syncthing
-        #duplicati
-        #borg
-        bleachbit
-        kdePackages.dolphin
-        pdfarranger
-        yt-dlp
-        libheif # heic image support
-        cmus
-
-
-        #mullvad-browser
-        # packages to check out
-        #nixpkgs-fmt # vscode wirft error, package install hat nicht geholfen
-      ];
+      starship # terminal prompt
+      flatpak
+      flatpak-builder # not sure if needed
+      mpv
+      alacritty
+      bitwarden-cli
+      spotify-player
+      #syncthing
+      #duplicati
+      #borg
+      bleachbit
+      kdePackages.dolphin
+      pdfarranger
+      yt-dlp
+      libheif # heic image support
+      cmus
+    ];
   };
 
 }

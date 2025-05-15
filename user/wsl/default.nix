@@ -1,4 +1,6 @@
-{ config, pkgs, username, ... }: {
+{ config, pkgs, username, ... }: 
+
+{
 	imports = [
 		../../modules/software/shell/zsh.nix
 	];
@@ -9,6 +11,5 @@
 		extraGroups =
 		[ "networkmanager" "network" "wheel" "lxd" "docker" "libvirtd" "syncthing" ];
     packages = with pkgs; [ ];
-
 	};
 }

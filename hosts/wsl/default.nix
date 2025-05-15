@@ -1,5 +1,6 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, lib, pkgs, modulesPath, ... }: 
 
+{
   _module.args = {
     username = "nixos";
   };
@@ -51,7 +52,6 @@
 
   wsl.startMenuLaunchers = true;
   networking.hostName = "wsl";
-
 }
 
 

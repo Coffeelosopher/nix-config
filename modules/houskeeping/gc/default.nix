@@ -1,4 +1,6 @@
-{ config, pkgs, ... } : {
+{ config, pkgs, ... } : 
+
+{
   nix.gc = {
     automatic = true;
     dates = "05:30";

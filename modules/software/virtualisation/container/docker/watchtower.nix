@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   imports = [ ./default.nix ];
 
   virtualisation.oci-containers.containers."watchtower" = {

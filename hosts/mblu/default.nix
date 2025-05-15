@@ -1,4 +1,6 @@
-{ config, lib, pkgs, modulesPath, variables, ... }: {
+{ config, lib, pkgs, modulesPath, variables, ... }: 
+
+{
   imports = [
     # Host specific
     ./network.nix

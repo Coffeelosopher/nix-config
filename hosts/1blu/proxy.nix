@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   networking.firewall = {
     allowedTCPPorts = [
       80

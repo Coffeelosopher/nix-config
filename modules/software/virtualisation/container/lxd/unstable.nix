@@ -1,5 +1,6 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, ... }: 
 
+{
   # Disable old module
   disabledModules = [ "virtualisation/lxd.nix" ];
 

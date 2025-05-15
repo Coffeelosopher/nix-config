@@ -1,4 +1,5 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, lib, pkgs, modulesPath, ... }: 
+{
   imports = [
     # Host System
     #./configuration.nix # xaver Thinksync

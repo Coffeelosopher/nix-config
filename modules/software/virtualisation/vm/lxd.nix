@@ -1,6 +1,5 @@
-{ config, pkgs, ... } : { 
+{ config, pkgs, ... }: 
 
-  imports = [ 
-    ../container/lxd/default.nix 
-  ]; 
+{ 
+  imports = [ ../container/lxd/default.nix ]; 
 }

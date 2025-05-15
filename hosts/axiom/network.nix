@@ -1,5 +1,6 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, ... }: 
 
+{
    networking = {
         interfaces = {
             ens3.ipv4.addresses = [{

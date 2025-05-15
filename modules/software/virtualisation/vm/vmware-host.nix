@@ -1,1 +1,5 @@
-{ config, pkgs, ... }: { virtualisation.vmware.host.enable = true; }
+{ config, pkgs, ... }: 
+
+{ 
+  virtualisation.vmware.host.enable = true;
+}
