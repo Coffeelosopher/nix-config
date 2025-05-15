@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+{
   imports = [
     # Hypervisor includes container
     ./containervisor.nix

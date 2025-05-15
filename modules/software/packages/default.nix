@@ -53,7 +53,7 @@
 	ack
   python3
 	restic
-	jdupes
+	jdupes # https://github.com/h2oai/jdupes
 	ventoy
 	powertop
 	netcat-gnu
