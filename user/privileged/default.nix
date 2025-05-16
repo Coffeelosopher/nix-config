@@ -1,11 +1,9 @@
-{ config, pkgs, variables, ... }: 
-
-{
+{ config, pkgs, username, ... }: {
   imports = [
     ../../modules/software/shell/zsh.nix
   ];
 
-  users.users."${variables.username}"= {
+  users.users."${username}"= {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "privileged user";
@@ -13,7 +11,7 @@
     [ "networkmanager" "network" "wheel" "lxd" "docker" "libvirtd" "syncthing" ];
 
     openssh.authorizedKeys.keys = [
-     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
     ];
   };
 }
