@@ -1,43 +1,23 @@
-{ config, lib, pkgs, modulesPath, variables, ... }: 
+{ pkgs, lib, ... }:
 
 {
-  imports = [
-    # Base
-    ../../modules/base/server.nix
-
-    # Software
-    ## container
-    ../../modules/software/virtualisation/container/docker/default.nix
-    ../../modules/software/virtualisation/container/docker/watchtower.nix
-
-
-    ## Editor
+  imports = [ 
     ../../modules/software/editors/neovim/default.nix
   ];
 
-  services.openssh.enable = true;
+  # Normal NixOS options …
+  networking.hostName = "nixos-vm";
+  users.users.alice = { isNormalUser = true; initialPassword = "changeme"; };
 
-  users.users.root.openssh.authorizedKeys.keys = [ 
-	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
-	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKSBSNv+Trea4+rX7bsRB7J9V49RjWXAkpDTqAos72EC conan@RazerBlade"
-	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO9DEqbD9Q7ZoTww27wQU2WrHkd39S3A1h8pkXMB22N6 nico@fedora"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQpIsD8IHFqmhL3aeqnIYiUlWQOj8juB7ooc1Ylz3ql Nico@Gaming-Rig"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB3n6T3hNhn/LYJ6zc8OWdoVzYJNYC7jPWKhjJzqio6d nixos@nixos"
-  ];
-
+  # 1-liner that pulls in open-vm-tools, video + input drivers,
+  # time sync service, shared-folders support, etc.                ↓↓↓
   virtualisation.vmware.guest.enable = true;
 
-  # hostName
-  networking.hostName = "vm-guest";
-  system.stateVersion = "23.05";
-
-  # Keymap + Keyboard variant
-  services.xserver.xkb = {
-      layout = "uk";
-      variant = "";
+  # (Optional) If you prefer EFI instead of the default BIOS
+  boot.loader.grub = {
+    efiSupport = true;
+    device = "nodev";
   };
 
-  boot.tmp.cleanOnBoot = true;
-  zramSwap.enable = true;
-  nixpkgs.config.allowUnfree = true;
- }
+}
+
