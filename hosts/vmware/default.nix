@@ -1,4 +1,8 @@
 { pkgs, lib, ... }:
+let
+  username = "alice";
+  hostname = "vmware-guest"
+in 
 
 {
   imports = [ 
@@ -6,18 +10,15 @@
   ];
 
   # Normal NixOS options …
-  networking.hostName = "nixos-vm";
+  networking.hostName = "${hostname}";
   users.users.alice = { isNormalUser = true; initialPassword = "changeme"; };
 
-  # 1-liner that pulls in open-vm-tools, video + input drivers,
-  # time sync service, shared-folders support, etc.                ↓↓↓
+  # open-vm-tools, video + input drivers,
   virtualisation.vmware.guest.enable = true;
 
-  # (Optional) If you prefer EFI instead of the default BIOS
   boot.loader.grub = {
     efiSupport = true;
     device = "nodev";
   };
-
 }
 
