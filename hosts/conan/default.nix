@@ -55,5 +55,6 @@
   users.users.root.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKSBSNv+Trea4+rX7bsRB7J9V49RjWXAkpDTqAos72EC conan@RazerBlade"
 	  "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILM4DAGi3Pn0mhPGqzDa3uoh4vO0/jA48nryrTLPdvsD nico@Zenit"
   ];
 }
