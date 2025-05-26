@@ -1,11 +1,11 @@
-{ config, pkgs, username, ... }: 
+{ config, pkgs, variables, ... }: 
 
 {
   imports = [ 
     ./default.nix
   ];
 
-  users.users.username = {
+  users.users.${variables.username} = {
     packages = with pkgs; [ ];
   };
 }
