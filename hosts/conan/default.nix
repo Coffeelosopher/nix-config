@@ -36,6 +36,9 @@
 
     ## Aliases 
     ../../modules/software/shell/alias/default.nix
+
+    ## Homestead java
+    ../../modules/software/gaming/minecraft-homestead.nix
   ];
 
   # HostName and Stateversion
