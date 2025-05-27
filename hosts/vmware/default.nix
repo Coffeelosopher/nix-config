@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 let
   username = "alice";
-  hostname = "vmware-guest"
+  hostname = "vmware-guest";
 in 
 
 {
