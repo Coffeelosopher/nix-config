@@ -20,6 +20,7 @@
     lazygit
     xclip
     #nodejs_23
+    nixd #language server
   ];
 
   fonts.packages = with pkgs; [
