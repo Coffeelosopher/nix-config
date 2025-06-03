@@ -43,7 +43,7 @@
           #  {
           #    home-manager.useGlobalPkgs = true;
           #    home-manager.useUserPackages = true;
-          #    #home-manager.users.${variables.username}= ./home.nix;
+          #    #home-manager.users.${Machine.username}= ./home.nix;
           #    home-manager.users.joe= ./home.nix;
 
           #    # Optionally, use home-manager.extraSpecialArgs to pass

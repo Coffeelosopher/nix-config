@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, variables, ... }: 
+{ config, lib, pkgs, modulesPath, Machine, ... }: 
 
 {
   imports = [
@@ -16,8 +16,8 @@
     ../../modules/software/virtualisation/container/docker/default.nix
     ../../modules/software/virtualisation/container/docker/watchtower.nix
 
-    ## Cloud
-    ../../modules/software/packages/azure.nix
+    ## system packages
+    ../../modules/software/packages/system/complete.nix
 
     ## Editor
     ../../modules/software/editors/neovim/default.nix
@@ -33,7 +33,7 @@
   ];
 
   # hostName
-  networking.hostName = "${variables.hostname}";
+  networking.hostName = "${Machine.hostname}";
   system.stateVersion = "23.05";
 
   # Keymap + Keyboard variant

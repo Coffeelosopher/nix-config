@@ -1,9 +1,9 @@
-{ config, lib, pkgs, modulesPath, ... }: 
+{ config, lib, pkgs, ... }: 
 
 {
   _module.args = {
     Machine = {
-      hostname = "mblu";
+      hostname = "axiom";
       username = "nico";
     };
   };

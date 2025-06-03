@@ -1,10 +1,10 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, Machine, ... }:
 
 {
 
   imports = [ ];
 
-  users.users.${username} = {
+  users.users.${Machine.username} = {
     packages = with pkgs; [
       unityhub
       jetbrains.rider

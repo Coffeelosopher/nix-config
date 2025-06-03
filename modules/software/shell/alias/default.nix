@@ -1,4 +1,4 @@
-{ config, pkgs, variables, ... }: {
+{ config, pkgs, Machine, ... }: {
 
   environment.shellAliases = {
     # NIXOS Build

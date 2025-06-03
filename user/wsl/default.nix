@@ -1,11 +1,11 @@
-{ config, pkgs, username, ... }: 
+{ config, pkgs, Machine, ... }: 
 
 {
 	imports = [
 		../../modules/software/shell/zsh.nix
 	];
 
-  users.users."${username}"= {
+  users.users."${Machine.username}"= {
 		shell = pkgs.zsh;
 		description = "wsl default user";
 		extraGroups =

@@ -3,8 +3,8 @@
 {
   _module.args = {
     Machine = {
-      hostname = "mblu";
-      username = "nico";
+      hostname = "wsl";
+      username = "nixos";
     };
   };
 }

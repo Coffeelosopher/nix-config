@@ -3,8 +3,13 @@
 {
   imports = [ 
     ../../modules/software/shell/zsh.nix
-    ../../modules/software/packages/default.nix
+    ../../modules/software/packages/system/complete.nix
     ../../modules/software/vpn/tailscale/default.nix
+  ];
+
+  # root ssh key
+  users.users.root.openssh.authorizedKeys.keys = [
+  	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
   ];
 
   # Systemd Boot add memtest and netbootxyz
@@ -24,11 +29,6 @@
       X11Forwarding = true;
     };
   };
-
-  # root ssh key
-  users.users.root.openssh.authorizedKeys.keys = [
-  	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRamh4k5eDwjYopD889LnxlEJVFsjJuOeTxvbMSZMMK nico.nicklis@icloud.com"
-  ];
 
   # auto optimise store
   nix.settings.auto-optimise-store = true;

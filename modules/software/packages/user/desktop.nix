@@ -1,14 +1,9 @@
-{ config, pkgs, username, ... }: 
+{ config, pkgs, Machine, ... }: 
 
 {
   imports = [ 
     ./default.nix
-    #./config/home.nix # unfinished not working home manager config
-    #../../modules/services/spotifyd.nix # not working spotifyd daemon
-    #../../modules/services/dropbox.nix # broken
-    #../../modules/software/vpn/mullvad/default.nix
-    #../../modules/services/syncthing/default.nix
-    ../flatpak.nix
+    #./flatpak.nix
   ];
 
   # make appimages run with gearlever
@@ -17,11 +12,10 @@
     binfmt = true;
   };
 
-  users.users.${username} = {
+  users.users.${Machine.username} = {
     packages = with pkgs; [
       qemu
       quickemu
-      #gpu-screen-recorder-gtk # flatpak because nixpkgs is out of date
       losslesscut-bin # cuts videos
       mousai # shazam for linux
       pinokio # ai tool installer?
@@ -30,7 +24,6 @@
       pulsemixer
       timeshift
       darktable # lightroom alternative
-      #gimp
       gtk3
       gearlever
       neovide
@@ -46,19 +39,15 @@
       thunderbird
       vscode
       ffmpeg-full
-      #bitwarden # x86 only-use flatpak
       discord
       strawberry
       vlc
-      #spotify # use flatpak 
       spotify-player
-      obsidian
       obs-studio
       signal-desktop
       drawio
       syncthing
       duplicati
-      #etcher # balena etcher, iso flash utility
       anki
       parsec-bin
       bleachbit
@@ -68,9 +57,6 @@
       yt-dlp
       mullvad-browser
       libheif # heic image support
-      chromium
-      # packages to check out
-      #nixpkgs-fmt # vscode wirft error, package instlal hat nicht geholfen
       openconnect # anyconnect alternative... bitte?
     ];
   };

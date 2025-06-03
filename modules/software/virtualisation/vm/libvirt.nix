@@ -1,13 +1,13 @@
-{ config, pkgs, username, ... }: 
+{ config, pkgs, Machine, ... }: 
 
 {
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = ["${username}"];
+  users.groups.libvirtd.members = ["${Machine.username}"];
   # Add user to libvirtd group
-  users.users.${username}.extraGroups = [ "libvirtd" ];
+  users.users.${Machine.username}.extraGroups = [ "libvirtd" ];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [

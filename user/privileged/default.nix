@@ -1,11 +1,11 @@
-{ config, pkgs, variables, ... }: 
+{ config, pkgs, Machine, ... }: 
 
 {
   imports = [
     ../../modules/software/shell/zsh.nix
   ];
 
-  users.users."${variables.username}"= {
+  users.users."${Machine.username}"= {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "privileged user";

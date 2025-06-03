@@ -1,18 +1,10 @@
-{ config, lib, pkgs, modulesPath, ... }: 
-
-let
-  JSON = builtins.fromJSON (builtins.readFile ./test.json);
-in 
+{ config, lib, pkgs, ... }: 
 
 {
   _module.args = {
-    variables = {
+    Machine = {
       hostname = "conan";
       username = "nico";
-      
-      var1 = JSON.hostname;
-      var2 = JSON.username;
-      data1 = builtins.elemAt JSON.data.more 2;
     };
   };
 }

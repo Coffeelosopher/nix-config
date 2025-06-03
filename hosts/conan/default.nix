@@ -15,7 +15,7 @@
 
     # Software
     ## Packages
-    ../../modules/software/packages/default.nix
+    ../../modules/software/packages/system/complete.nix
 
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix

@@ -1,4 +1,4 @@
-{ config, pkgs, variables, ... }:
+{ config, pkgs, Machine, ... }:
 
 let
   dotfilesPath = ../dotfiles/.config;

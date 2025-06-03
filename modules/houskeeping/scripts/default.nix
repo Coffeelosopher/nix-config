@@ -6,16 +6,16 @@
     systemPackages = with pkgs; [
       (writeScriptBin "switch" ''
         #!${pkgs.bash}/bin/bash
-        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild switch --refresh --no-write-lock-file --flake git+ssh://git@gitea.hostedbymyself.de:2022/xaver.russ/nixconfig.git#
+        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild switch --refresh --no-write-lock-file --flake git+ssh://git@gitea.nicklis.cloud:2022/Coffeelosopher/nixconfig.git#
       '')
       (writeScriptBin "testconfig" ''
         #!${pkgs.bash}/bin/bash
         sudo shutdown -r 30
-        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild test --refresh --no-write-lock-file --flake git+ssh://git@gitea.hostedbymyself.de:2022/xaver.russ/nixconfig.git#
+        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild test --refresh --no-write-lock-file --flake git+ssh://git@gitea.nicklis.cloud:2022/Coffeelosopher/nixconfig.git#
       '')
       (writeScriptBin "boot" ''
         #!${pkgs.bash}/bin/bash
-        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild boot --refresh --no-write-lock-file --flake git+ssh://git@gitea.hostedbymyself.de:2022/xaver.russ/nixconfig.git#
+        sudo ${pkgs.nixos-rebuild}/bin/nixos-rebuild boot --refresh --no-write-lock-file --flake git+ssh://git@gitea.nicklis.cloud:2022/Coffeelosopher/nixconfig.git#
       '')
       (writeScriptBin "generate-iso" ''
         #!${pkgs.bash}/bin/bash
@@ -23,7 +23,7 @@
           echo "Cleaning $item"
           nix-store --delete $item
         done
-        nixos-generate -f iso --flake git+ssh://git@gitea.hostedbymyself.de:2022/xaver.russ/nixconfig.git#nixos
+        nixos-generate -f iso --flake git+ssh://git@gitea.nicklis.cloud:2022/Coffeelosopher/nixconfig.git#nixos
       '')
       (writeScriptBin "clean" ''
         #!${pkgs.bash}/bin/bash

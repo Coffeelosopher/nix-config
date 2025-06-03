@@ -10,6 +10,7 @@
 	  eza # ls and other basic commands
     zip
     unzip
+    toybox
 	  nano
 	  vim
     neovim
@@ -17,8 +18,6 @@
 	  git-annex
 	  gh
     appimage-run
-	  nixos-generators
-	  nixos-option
 	  parted
 	  pciutils
 	  dig
@@ -28,7 +27,6 @@
 	  starship
 	  htop
 	  btop
-	  glances
 	  gdu
 	  fzf
 	  zellij
@@ -36,16 +34,10 @@
 	  tree
 	  pstree
 	  busybox
-	  magic-wormhole
 	  iperf3
-	  autossh
-	  speedtest-cli
 	  lm_sensors
-	  links2
 	  jq
 	  inetutils
-	  aria
-	  dfc
 	  duf
 	  trash-cli
 	  tldr
@@ -53,8 +45,6 @@
 	  ack
     python3
 	  restic
-	  jdupes # https://github.com/h2oai/jdupes
-	  ventoy
 	  powertop
 	  netcat-gnu
 	  ranger

@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ ../packages/flatpak.nix ];
+  imports = [ ../../software/packages/user/flatpak.nix ];
   # Enable networking
   networking.networkmanager.enable = true;
 

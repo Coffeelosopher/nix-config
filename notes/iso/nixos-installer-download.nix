@@ -13,7 +13,7 @@
   systemd.services."nixos-installer-download" = {
     script = ''
       #!${pkgs.bash}/bin/bash
-      ${pkgs.git}/bin/git clone https://gitea.hostedbymyself.de/xaver.russ/nixos-installer.git /etc/nixos/nixos-installer --depth 1
+      ${pkgs.git}/bin/git clone https://gitea.nicklis.cloud/Coffeelosopher/nixos-installer.git /etc/nixos/nixos-installer --depth 1
       ${pkgs.coreutils}/bin/ln -s /etc/nixos/nixos-installer /root/nixos-installer
     '';
     serviceConfig = {

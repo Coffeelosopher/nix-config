@@ -1,14 +1,11 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  _module.args = {
-    username = "nico";
-  };
-
-
   imports = [
+    
     # Host specific
     #($modulesPath + "/lenovo/thinkpad/t480/default.nix")
+    ./variables.nix
 
     # System Base/Type
     ../../modules/base/desktop.nix
@@ -19,9 +16,8 @@
     # Modules
     ## Software
     ### System Packages
-    ../../modules/software/packages/default.nix
+    ../../modules/software/packages/system/complete.nix
     ### User Packages
-    #../../modules/software/packages/user/wsl.nix
     ../../modules/software/packages/user/desktop.nix
 
     # Editors
@@ -70,7 +66,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-a64f19c4-74ca-40ff-bde7-3332545856a9".device = "/dev/disk/by-uuid/a64f19c4-74ca-40ff-bde7-3332545856a9";
-  networking.hostName = "axiom"; # Define your hostname.
+  networking.hostName = ${Machine.hostname}; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

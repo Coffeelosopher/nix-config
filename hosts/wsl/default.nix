@@ -1,11 +1,11 @@
 { config, lib, pkgs, modulesPath, ... }: 
 
 {
-  _module.args = {
-    username = "nixos";
-  };
 
   imports = [
+    # Host Specific
+    ./variables.nix
+
     # System Base/Type
     ../../modules/base/desktop.nix
 
@@ -14,28 +14,18 @@
 
     ## Software
     ### User Packages
-    ../../modules/software/packages/user/wsl.nix
+    ../../modules/software/packages/wsl/default.nix
 
     ### System Packages
-    ../../modules/software/packages/default.nix
+    ../../modules/software/packages/system/complete.nix
 
-    ## Azure
-    ../../modules/software/packages/azure.nix
-    
     # Editors
     ## Neovim
     ../../modules/software/editors/neovim/default.nix
 
-
-    # Container
-    #../../modules/software/virtualisation/container/docker/default.nix
-    #../../modules/software/virtualisation/container/docker/watchtower.nix
-    #../../modules/software/virtualisation/container/lxd/default.nix
-
-
     # Automation
     ## Garbage collection
-    #../../modules/houskeeping/gc/default.nix
+    ../../modules/houskeeping/gc/default.nix
   ];
 
   # temp flatpak setup

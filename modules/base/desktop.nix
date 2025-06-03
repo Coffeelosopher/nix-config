@@ -1,10 +1,14 @@
-{ config, pkgs, lib, ... }: 
+{ lib, ... }: 
 
 {
   imports = [
     ../../modules/software/shell/zsh.nix
-    ../../modules/software/packages/default.nix
+    ../../modules/software/packages/user/desktop.nix
   ];
+
+
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # SSHD
   services.openssh = {
@@ -13,6 +17,16 @@
       PasswordAuthentication = false;
       #X11Forwarding = true;
     };
+  };
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # CUPS auto discovery experiment
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   # Experimental Features
@@ -24,11 +38,18 @@
   # Limit journal size
   services.journald.extraConfig = lib.mkDefault "SystemMaxUse=250M";
 
-
   # Default architecture
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  # Locale
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "gb";
+    variant = "";
+  };
+
+  # Configure console keymap
+  console.keyMap = "uk";
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -47,10 +68,19 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  ######### MISC ############
-
   # Zram 
-  #zramSwap.enable = lib.mkDefault true;
+  zramSwap.enable = lib.mkDefault true;
+
+  # minimal Sound setup
+  services = {
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = false;
+    };
+  };
 
   # auto optimise store
   #nix.settings.auto-optimise-store = true;

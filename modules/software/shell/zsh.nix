@@ -28,7 +28,7 @@
 
     ohMyZsh = {
       enable = true;
-      theme = "mh";
+      theme = "awesomepanda";
 
       plugins = [
         "git"
