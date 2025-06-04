@@ -60,6 +60,14 @@
         ];
       };
 
+      eco = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/eco/default.nix
+          determinate.nixosModules.default
+        ];
+      };
+
       wsl = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
