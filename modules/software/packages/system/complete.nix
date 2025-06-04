@@ -14,7 +14,7 @@
 	  links2
 	  dfc
 	  jdupes # https://github.com/h2oai/jdupes
-	  ventoy
+	  #ventoy #flagged as insecure
 	  autossh
 	  speedtest-cli
 	  aria
