@@ -13,9 +13,9 @@
 
   outputs = { 
     nixpkgs, 
+    nixos-hardware, 
     determinate, 
     nixos-wsl, 
-    nixos-hardware, 
     home-manager, 
     nix-flatpak, 
     ... 
