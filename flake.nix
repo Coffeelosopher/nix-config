@@ -11,8 +11,17 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
   };
 
-  outputs = { self, nixpkgs, determinate, nixos-wsl, nixos-hardware, home-manager, nix-flatpak, ... }@inputs: {
+  outputs = { 
+    nixpkgs, 
+    determinate, 
+    nixos-wsl, 
+    nixos-hardware, 
+    home-manager, 
+    nix-flatpak, 
+    ... 
+  }:
 
+  {
     nixosConfigurations = {
       
       zenit = nixpkgs.lib.nixosSystem {
@@ -25,14 +34,6 @@
           ];
       };
         
-      #axiom = nixpkgs.lib.nixosSystem {
-      #  system = "x86_64-linux";
-      #  modules = [
-      #    ./hosts/axiom/default.nix
-      #    determinate.nixosModules.default
-      #    nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
-      #  ];
-      #};
 
       conan = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -79,8 +80,28 @@
             system.stateVersion = "24.11";
             wsl.enable = true;
           }
+
+          #home-manager.nixosModules.home-manager
+          #  {
+          #    home-manager.useGlobalPkgs = true;
+          #    home-manager.useUserPackages = true;
+          #    #home-manager.users.${Machine.username}= ./home.nix;
+          #    home-manager.users.joe= ./home.nix;
+
+          #    # Optionally, use home-manager.extraSpecialArgs to pass
+          #    # arguments to home.nix
+          #  }
         ];
       };
+
+      #axiom = nixpkgs.lib.nixosSystem {
+      #  system = "x86_64-linux";
+      #  modules = [
+      #    ./hosts/axiom/default.nix
+      #    determinate.nixosModules.default
+      #    nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
+      #  ];
+      #};
     };
   };
 }
