@@ -67,6 +67,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/wsl/default.nix
+          nix-flatpak.nixosModules.nix-flatpak
 
           nixos-wsl.nixosModules.default
           {
