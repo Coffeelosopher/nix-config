@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -14,7 +13,6 @@
   outputs = { 
     nixpkgs, 
     nixos-hardware, 
-    determinate, 
     nixos-wsl, 
     home-manager, 
     nix-flatpak, 
@@ -29,7 +27,6 @@
           modules = [
 
             ./hosts/zenit/default.nix
-            determinate.nixosModules.default
             nix-flatpak.nixosModules.nix-flatpak
           ];
       };
@@ -39,7 +36,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/conan/default.nix
-          determinate.nixosModules.default
           #home-manager.nixosModules.home-manager
           #  {
           #    home-manager.useGlobalPkgs = true;
@@ -57,7 +53,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/mblu/default.nix
-          determinate.nixosModules.default
         ];
       };
 
@@ -65,7 +60,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/eco/default.nix
-          determinate.nixosModules.default
         ];
       };
 
@@ -73,7 +67,6 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/wsl/default.nix
-          determinate.nixosModules.default
 
           nixos-wsl.nixosModules.default
           {
@@ -94,14 +87,13 @@
         ];
       };
 
-      #axiom = nixpkgs.lib.nixosSystem {
-      #  system = "x86_64-linux";
-      #  modules = [
-      #    ./hosts/axiom/default.nix
-      #    determinate.nixosModules.default
-      #    nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
-      #  ];
-      #};
+      axiom = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/axiom/default.nix
+          nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
+        ];
+      };
     };
   };
 }
