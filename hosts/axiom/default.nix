@@ -27,7 +27,7 @@
 
     # Housekeeping
     ## garbage collection
-    ../../modules/houskeeping/gc/default.nix
+    #../../modules/houskeeping/gc/default.nix
 
     ## VPN
     ../../modules/software/vpn/tailscale/default.nix
