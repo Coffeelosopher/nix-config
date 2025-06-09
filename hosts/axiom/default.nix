@@ -3,7 +3,7 @@
 {
   imports = [
     # Host specific 
-    ./hardware.nix
+    #./hardware.nix
     ./variables.nix
 
     # System Base/Type

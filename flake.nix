@@ -87,13 +87,13 @@
         ];
       };
 
-      axiom = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/axiom/default.nix
-          nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
-        ];
-      };
+      #axiom = nixpkgs.lib.nixosSystem {
+      #  system = "x86_64-linux";
+      #  modules = [
+      #    ./hosts/axiom/default.nix
+      #    nixos-hardware.nixosModules.lenovo-thinkpad-t480 # check if path is correct
+      #  ];
+      #};
     };
   };
 }
