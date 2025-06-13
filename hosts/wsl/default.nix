@@ -7,7 +7,7 @@
     ./variables.nix
 
     # System Base/Type
-    ../../modules/base/desktop.nix
+    ../../modules/base/wsl.nix
 
     # User
     ../../user/wsl/default.nix 
